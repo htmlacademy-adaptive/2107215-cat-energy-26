@@ -1,0 +1,21 @@
+@mixin name {
+  background-color: rgb(116, 181, 130);
+}
+
+@mixin font-oswald($font-size, $line-height) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin font-arial($font-size, $line-height) {
+  font-family: "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,15 @@
+@import "../mixins.scss";
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__value {
+  @include font-oswald(24px, 24px);
+  margin-bottom: 7px;
+}
+
+.stats__inner {
+  text-align: center;
+}

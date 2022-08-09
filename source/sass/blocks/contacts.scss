@@ -1,0 +1,19 @@
+@import "../mixins.scss";
+
+.main-footer__contacts {
+  margin: 0 auto;
+  width: 280px;
+  display: flex;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.contacts__title {
+  @include font-oswald(16px, 20px);
+  min-width: 139px;
+}
+
+.contacts__text {
+  @include font-arial(14px, 20px);
+  color: #111111;
+}

@@ -1,0 +1,40 @@
+@import "../variables.scss";
+
+.nutrition-program__list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.nutrition-program__item {
+  background-color: #f2f2f2;
+  padding: 30px 33px 0 20px;
+}
+
+.nutrition-program__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 29px;
+  text-transform: uppercase;
+}
+
+.nutrition-program__description {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
+  color: $color-light-black;
+}

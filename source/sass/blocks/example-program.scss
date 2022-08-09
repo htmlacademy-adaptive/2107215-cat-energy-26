@@ -1,0 +1,35 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.example-program__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
+.example-program__title {
+  @include font-oswald(36px, 40px);
+  margin-bottom: 40px;
+}
+
+.example-program__description {
+  @include font-arial(14px, 18px);
+  color: $color-light-black;
+  margin-bottom: 20px;
+}
+
+.example-program__calculation {
+  @include font-oswald(14px, 20px);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.example-program {
+  background-color: #eaeaea;
+}
+
+.example-program__stats {
+  margin: 0;
+  margin-bottom: 20px;
+}
