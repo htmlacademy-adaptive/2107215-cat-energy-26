@@ -1,0 +1,27 @@
+@import "../mixins.scss";
+
+.catalog__header {
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-bottom: 49px;
+}
+
+.catalog__header-title {
+  @include font-oswald(36px, 36px);
+}
+
+.catalog__cards {
+  margin: 0 auto;
+  width: 280px;
+}
+
+.catalog__list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 280px;
+  margin: 0 auto;
+}
