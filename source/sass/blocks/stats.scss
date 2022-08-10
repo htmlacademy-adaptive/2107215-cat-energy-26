@@ -7,15 +7,18 @@
 }
 
 .stats__value {
-  @include font-oswald(24px, 24px);
-  margin-bottom: 7px;
+  @include font-arial(12px, 12px);
+  color: $color-tundora;
 }
 
 .stats__inner {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .stats__description {
-  @include font-arial(12px, 12px);
-  color: $color-tundora;
+  @include font-oswald(24px, 24px);
+  margin-bottom: 7px;
+  order: -1;
 }
