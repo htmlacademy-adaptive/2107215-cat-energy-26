@@ -1,0 +1,24 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.field {
+  display: flex;
+  width: 280px;
+}
+
+.field__label {
+  @include font-oswald(16px, 18px);
+  color: $color-tundora;
+  flex-basis: content;
+  margin-right: 14px;
+  text-transform: uppercase;
+}
+
+.field__input {
+  @include font-oswald(16px, 18px);
+  color: $color-tundora;
+  flex-grow: 1;
+  min-width: 150px;
+  align-self: center;
+  text-transform: uppercase;
+}

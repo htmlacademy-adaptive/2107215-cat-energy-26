@@ -8,6 +8,15 @@
   margin: 0;
 }
 
+@mixin font-oswald-medium($font-size, $line-height) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
 @mixin font-arial($font-size, $line-height) {
   font-family: "Arial", sans-serif;
   font-size: $font-size;

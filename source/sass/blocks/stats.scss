@@ -1,4 +1,5 @@
 @import "../mixins.scss";
+@import "../variables.scss";
 
 .stats {
   display: flex;
@@ -12,4 +13,9 @@
 
 .stats__inner {
   text-align: center;
+}
+
+.stats__description {
+  @include font-arial(12px, 12px);
+  color: $color-tundora;
 }

@@ -15,7 +15,7 @@
 
 .example-program__description {
   @include font-arial(14px, 18px);
-  color: $color-light-black;
+  color: $color-tundora;
   margin-bottom: 20px;
 }
 
@@ -23,6 +23,7 @@
   @include font-oswald(14px, 20px);
   text-align: center;
   margin-bottom: 40px;
+  text-transform: uppercase;
 }
 
 .example-program {

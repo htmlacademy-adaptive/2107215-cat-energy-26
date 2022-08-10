@@ -27,11 +27,11 @@
 
 .card__name {
   @include font-arial(12px, 16px);
-  color: $color-light-black;
+  color: $color-tundora;
 }
 
 .card__value {
   @include font-arial(12px, 16px);
-  color: $color-light-black;
+  color: $color-tundora;
   text-align: right;
 }

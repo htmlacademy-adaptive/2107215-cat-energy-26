@@ -1,13 +1,12 @@
 @use "./mixins.scss";
-@use "./blocks/font.scss";
-@use "./box-sizing.scss";
-@use "./visually-hidden.scss";
-@use "./blocks/html-page.scss";
+@use "./font.scss";
+@use "./global.scss";
+@use "./blocks/page.scss";
 @use "./blocks/page-body.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/main-nav.scss";
-@use "./blocks/main-container.scss";
 @use "./blocks/button.scss";
+@use "./blocks/main-container.scss";
 @use "./blocks/nutrition-program.scss";
 @use "./blocks/about-program.scss";
 @use "./blocks/example-program.scss";
@@ -20,4 +19,10 @@
 @use "./blocks/card.scss";
 @use "./blocks/card-foot.scss";
 @use "./blocks/additional-products.scss";
-
+@use "./blocks/additional-product.scss";
+@use "./blocks/catalog-promo.scss";
+@use "./blocks/form-program.scss";
+@use "./blocks/order-form.scss";
+@use "./blocks/field.scss";
+@use "./blocks/control.scss";
+@use "./blocks/radio.scss";
