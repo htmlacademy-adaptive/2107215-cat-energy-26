@@ -1,0 +1,52 @@
+@import "../variables.scss";
+
+.main-footer {
+  background-color: $color-white;
+}
+
+.main-footer--color-concrete {
+  background-color: $color-concrete;
+}
+
+.main-footer__inner {
+  margin: 0 auto;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 22px;
+}
+
+.main-footer__wrapper {
+  background-color: $color-concrete;
+}
+
+.main-footer__map {
+  text-align: center;
+  margin-bottom: 39px;
+}
+
+.main-footer__box {
+  min-width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer__link-logo-cat {
+  margin-bottom: 52px;
+}
+
+.main-footer__social {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 43px;
+}
+
+.main-footer__contacts {
+  margin: 0 auto;
+  width: 280px;
+  display: flex;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}

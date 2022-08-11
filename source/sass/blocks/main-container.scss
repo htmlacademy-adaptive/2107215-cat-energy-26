@@ -1,0 +1,42 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.main-container {
+  flex-grow: 1;
+  background: url("../img/cat-image.jpg") no-repeat top;
+  background-size: 320px 302px;
+}
+
+.main-container__header {
+  margin: 0 auto;
+  width: 280px;
+  padding-top: 27px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-container__wrapper {
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 60%, #ffffff 60%);
+}
+
+.main-container__title {
+  @include font-oswald(36px, 36px);
+  text-align: center;
+  margin-bottom: 25px;
+  color: $color-white;
+}
+
+.main-container__slogan {
+  @include font-oswald(14px, 14px);
+  text-align: center;
+  margin-bottom: 29px;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
+.main-container__link {
+  @include font-oswald(14px, 18px);
+  padding: 7px 10px;
+}

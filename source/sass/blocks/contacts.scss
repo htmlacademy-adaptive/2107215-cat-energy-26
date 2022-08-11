@@ -1,0 +1,14 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.contacts__title {
+  @include font-oswald(16px, 20px);
+  min-width: 139px;
+  color: $color-tundora;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  @include font-arial(14px, 20px);
+  color: $color-tundora;
+}

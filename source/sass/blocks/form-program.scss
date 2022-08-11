@@ -1,0 +1,27 @@
+@import "../mixins.scss";
+
+.form-program {
+  padding-bottom: 32px;
+}
+
+.form-program__header {
+  margin: 0 auto;
+  width: 280px;
+  padding-top: 27px;
+  padding-bottom: 37px;
+}
+
+.form-program__title {
+  @include font-oswald(36px, 36px);
+}
+
+.form-program__order {
+  margin: 0 auto;
+  width: 280px;
+}
+
+.form-program__text {
+  @include font-oswald(14px, 18px);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}

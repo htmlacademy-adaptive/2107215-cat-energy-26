@@ -1,0 +1,10 @@
+.social {
+  display: flex;
+  list-style-type: none;
+}
+
+.social__link {
+  display: block;
+  min-width: 28px;
+  min-height: 22px;
+}

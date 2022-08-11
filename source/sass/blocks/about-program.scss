@@ -1,0 +1,33 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.about-program__wrapper {
+  margin: 0 auto;
+  width: 280px;
+  padding-top: 20px;
+  padding-bottom: 49px;
+}
+
+.about-program__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-program__title {
+  @include font-oswald(36px, 40px);
+  margin-bottom: 40px;
+}
+
+.about-program__description {
+  @include font-arial(14px, 18px);
+  color: $color-tundora;
+}
+
+.about-program__item {
+  padding-left: 80px;
+}

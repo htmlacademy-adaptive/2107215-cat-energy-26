@@ -1,0 +1,38 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.nutrition-program__list {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.nutrition-program__item {
+  background-color: #f2f2f2;
+  padding: 30px 33px 22px 20px;
+}
+
+.nutrition-program__title {
+  @include font-oswald(24px, 37px);
+  text-align: center;
+  margin-bottom: 29px;
+  text-transform: uppercase;
+}
+
+.nutrition-program__description {
+  @include font-arial(14px, 18px);
+  margin-bottom: 23px;
+  color: $color-tundora;
+}
+
+.nutrition-program__link {
+  @include font-oswald(16px, 16px);
+  text-transform: uppercase;
+  color: $color-black;
+  text-decoration: none;
+}

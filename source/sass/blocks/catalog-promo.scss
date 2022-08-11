@@ -1,0 +1,21 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.catalog-promo {
+  background: url(../img/cat-in-backpack.jpg) no-repeat bottom;
+  background-size: cover;
+}
+
+.catalog-promo__wrapper {
+  position: relative;
+  width: 280px;
+  min-height: 290px;
+  background-color: rgba(104, 183, 56, 0.85);
+  padding: 186px 60px 43px;
+}
+
+.catalog-promo__text {
+  @include font-arial(14px, 18px);
+  color: $color-white;
+  text-align: center;
+}

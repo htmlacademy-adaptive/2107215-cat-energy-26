@@ -1,0 +1,32 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.additional-product {
+  padding-top: 13px;
+  padding-bottom: 14px;
+}
+
+.additional-product__characteristics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.additional-product__title {
+  @include font-oswald(16px, 16px);
+  margin-bottom: 13px;
+  text-transform: uppercase;
+}
+
+.additional-product__text {
+  @include font-arial(14px, 14px);
+  color: $color-tundora;
+}
+
+.additional-product__price {
+  @include font-arial(14px, 14px);
+  color: $color-tundora;
+  display: block;
+  text-align: right;
+}

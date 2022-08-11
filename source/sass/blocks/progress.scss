@@ -1,0 +1,30 @@
+@import "../mixins.scss";
+
+.progress__button {
+  @include font-oswald(14px, 20px);
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.progress__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.progress__image-before {
+  position: relative;
+  width: 280px;
+  height: 232px;
+  background: url("../img/cat-fat.png") no-repeat center;
+  background-size: 280px 232px;
+  margin-bottom: 15px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 232px;
+    background: url("../img/cat-skinny.png") no-repeat center;
+    background-size: 280px 232px;
+  }
+}
