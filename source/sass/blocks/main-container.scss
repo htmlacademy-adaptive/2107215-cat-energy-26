@@ -2,23 +2,28 @@
 @import "../mixins.scss";
 
 .main-container {
-  flex-grow: 1;
   background: url("../img/cat-image.jpg") no-repeat top;
-  background-size: 320px 302px;
+  background-size: 100% 302px;
 }
 
 .main-container__header {
-  margin: 0 auto;
-  width: 280px;
-  padding-top: 27px;
-  padding-bottom: 20px;
+  padding: 27px 20px 20px;
+  min-height: 500px;
+  background: linear-gradient($color-apple-transparency 60%, $color-white 60%);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
+  justify-content: flex-start;
+  position: relative;
 
-.main-container__wrapper {
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85) 60%, #ffffff 60%);
+  &::before {
+    position: absolute;
+    content: "";
+    transform: translateY(51%) translateX(-7%);
+    width: 100%;
+    height: 270px;
+    background: url("../img/cat-food.png") no-repeat center;
+    background-size: 280px 270px;
+  }
 }
 
 .main-container__title {
@@ -39,4 +44,96 @@
 .main-container__link {
   @include font-oswald(14px, 18px);
   padding: 7px 10px;
+  margin: 0 auto;
+  margin-top: auto;
+}
+
+.main-container__image {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .main-container {
+    background: none;
+  }
+
+  .main-container__wrapper {
+    padding: 0 30px;
+  }
+
+  .main-container__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 62px 30px 30px 87px;
+    background-image: none;
+    min-height: 872px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background: url("../img/index-can-tablet.png") no-repeat center;
+      width: 100%;
+      height: 100%;
+      transform: translateY(9%) translateX(-13%);
+    }
+  }
+
+  .main-container__title {
+    @include font-oswald(60px, 60px);
+    text-align: left;
+    margin-bottom: 41px;
+    color: $color-black;
+  }
+
+  .main-container__slogan {
+    @include font-oswald(20px, 20px);
+    text-align: left;
+    margin-bottom: 49px;
+    color: $color-black;
+    text-transform: uppercase;
+  }
+
+
+  .main-container__link {
+    @include font-oswald(20px, 20px);
+    padding: 14px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .main-container__wrapper {
+    margin: 0 auto;
+    max-width: 1220px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 50%;
+      height: 694px;
+      top: 0;
+      right: 0;
+      background: linear-gradient($color-apple-transparency, $color-apple-transparency),
+        url("../img/index-cat-desktop.jpg") no-repeat center top;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
+
+  .main-container__header {
+    padding: 100px 80px 80px;
+    min-height: 660px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background: url("../img/index-foot-desktop.png") no-repeat center;
+      background-size: 552px 499px;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-25%) translateX(3%);
+    }
+  }
 }

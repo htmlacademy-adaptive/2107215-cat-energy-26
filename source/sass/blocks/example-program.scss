@@ -1,11 +1,32 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.example-program__wrapper {
-  width: 280px;
+.example-program {
+  background-color: #eaeaea;
+}
+
+.example-program__image-before {
+  position: relative;
+  min-width: 280px;
+  min-height: 232px;
   margin: 0 auto;
-  padding-top: 25px;
-  padding-bottom: 45px;
+  background: url("../img/cat-fat.png") no-repeat center;
+  background-size: 280px 232px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 232px;
+    background: url("../img/cat-skinny.png") no-repeat center;
+    background-size: 280px 232px;
+    left: 50%;
+    transform: translateX(-140px);
+  }
+}
+
+.example-program__wrapper {
+  padding: 25px 20px 40px;
 }
 
 .example-program__title {
@@ -21,16 +42,124 @@
 
 .example-program__calculation {
   @include font-oswald(14px, 20px);
-  text-align: center;
   margin-bottom: 40px;
   text-transform: uppercase;
-}
-
-.example-program {
-  background-color: #eaeaea;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .example-program__stats {
   margin: 0;
   margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .example-program {
+    background: linear-gradient($color-white 60%, $color-gallery 60%);
+  }
+
+  .example-program__wrapper {
+    padding: 43px 30px 100px;
+  }
+
+  .example-program__title {
+    @include font-oswald(60px, 60px);
+    margin-bottom: 63px;
+  }
+
+  .example-program__description {
+    @include font-arial(16px, 24px);
+    color: $color-tundora;
+    margin-bottom: 54px;
+  }
+
+  .example-program__calculation {
+    @include font-oswald(20px, 20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 9px;
+    max-width: 250px;
+  }
+
+  .example-program__calculation-value {
+    margin: 0;
+  }
+
+  .example-program__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 106px;
+  }
+
+  .example-program__stats {
+    margin: 0;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .example-program {
+    background: linear-gradient($color-white 20%, $color-gallery 20%);
+  }
+
+  .example-program__wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 0 75px;
+    display: flex;
+  }
+
+  .example-program__title {
+    margin-bottom: 146px;
+  }
+
+  .example-program__description {
+    @include font-arial(16px, 24px);
+    color: $color-tundora;
+    margin-bottom: 69px;
+  }
+
+  .example-program__inner {
+    max-width: 436px;
+  }
+
+  .example-program__stats {
+    margin-bottom: 55px;
+  }
+
+  .example-program__calculation {
+    @include font-oswald(20px, 20px);
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 63px;
+    max-width: 436px;
+  }
+
+  .example-program__box {
+    margin: 0;
+  }
+
+  .example-program__image-before {
+    position: relative;
+    min-width: 280px;
+    min-height: 232px;
+    margin: 0 auto;
+    background: url("../img/cat-fat.png") no-repeat center;
+    background-size: 280px 232px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 232px;
+      background: url("../img/cat-skinny.png") no-repeat center;
+      background-size: 280px 232px;
+      left: 50%;
+      transform: translateX(-140px) translateY(140px);
+    }
+  }
 }

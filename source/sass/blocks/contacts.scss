@@ -12,3 +12,29 @@
   @include font-arial(14px, 20px);
   color: $color-tundora;
 }
+
+.contacts__text-city {
+  @include font-arial(14px, 20px);
+  color: $color-tundora;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts__title {
+    @include font-oswald(20px, 26px);
+    max-width: 172px;
+    color: $color-cod-gray;
+  }
+
+  .contacts__text {
+    @include font-arial(16px, 20px);
+    margin-bottom: 18px;
+  }
+
+  .contacts__text-city {
+    @include font-arial(16px, 20px);
+  }
+
+  .contacts__box {
+    max-width: 160px;
+  }
+}

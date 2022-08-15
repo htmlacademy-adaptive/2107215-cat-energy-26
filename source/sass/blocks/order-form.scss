@@ -30,6 +30,7 @@
 .order-form__textarea {
   @include font-oswald(16px, 18px);
   color: $color-tundora;
+  text-transform: uppercase;
 }
 
 .order-form__button {
