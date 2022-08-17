@@ -5,8 +5,10 @@
   border: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 25px;
-  margin-bottom: 25px;
+}
+
+.order-form__fieldset--personal {
+  margin-bottom: 26px;
 }
 
 .order-form__fields {
@@ -18,8 +20,29 @@
   gap: 11px;
 }
 
-.order-form__fieldset--padding {
-  padding: 0;
+.order-form__fields-radio {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  row-gap: 12px;
+}
+
+.order-form__fieldset--program {
+  padding: 23px 0 18px;
+  margin-bottom: 27px;
+}
+
+.order-form__fieldset--contacts {
+  margin-bottom: 20px;
+}
+
+.order-form__fieldset--description {
+  margin-bottom: 23px;
+}
+
+.order-form__fieldset--additional {
+  margin-bottom: 34px;
 }
 
 .order-form__title {
@@ -31,6 +54,8 @@
   @include font-oswald(16px, 18px);
   color: $color-tundora;
   text-transform: uppercase;
+  min-height: 150px;
+  width: 280px;
 }
 
 .order-form__button {
@@ -41,4 +66,125 @@
   @include font-arial(14px, 16px);
   display: block;
   text-align: center;
+}
+
+.order-form__fields-item {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .order-form__fieldset--program {
+    padding: 25px 28px;
+    margin-bottom: 71px;
+  }
+
+  .order-form__fieldset--personal {
+    margin-bottom: 72px;
+  }
+
+  .order-form__fieldset--contacts {
+    margin-bottom: 65px;
+  }
+
+  .order-form__fieldset--description {
+    margin-bottom: 65px;
+  }
+
+  .order-form__fieldset--additional {
+    margin-bottom: 54px;
+  }
+
+  .order-form__fields--additional {
+    display: grid;
+    grid-template-columns: 230px 221px;
+    column-gap: 116px;
+    row-gap: 32px;
+  }
+
+  .order-form__title {
+    @include font-oswald(36px, 36px);
+    margin-bottom: 76px;
+  }
+
+  .order-form__textarea {
+    @include font-oswald(20px, 30px);
+    min-height: 174px;
+    width: 631px;
+  }
+
+  .order-form__button {
+    display: inline-block;
+    margin: 0;
+    margin-right: 61px;
+  }
+
+  .order-form__note {
+    display: inline-block;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .order-form__wrapper {
+    display: grid;
+    grid-template-columns: 569px 568px;
+    column-gap: 80px;
+    margin-bottom: 69px;
+  }
+
+  .order-form__fieldset--program {
+    padding: 25px 28px;
+    margin-bottom: 0;
+  }
+
+  .order-form__fieldset--personal {
+    margin-bottom: 0;
+  }
+
+  .order-form__fieldset--contacts {
+    margin-bottom: 69px;
+  }
+
+  .order-form__fieldset--description {
+    margin-bottom: 67px;
+  }
+
+  .order-form__fields--contacts {
+    display: grid;
+    grid-template-columns: 569px 568px;
+    column-gap: 80px;
+  }
+
+  .order-form__textarea {
+    width: 100%;
+  }
+
+  .order-form__note {
+    @include font-arial(16px, 16px);
+  }
+
+  .order-form__button {
+    @include font-oswald(20px, 20px);
+    margin-right: 81px;
+    width: 568px;
+    padding: 13px;
+  }
+
+  .order-form__title--contacts {
+    margin-bottom: 79px;
+  }
+
+  .order-form__title--description {
+    margin-bottom: 76px;
+  }
+
+  .order-form__title--additional {
+    margin-bottom: 57px;
+  }
+
+  .order-form__fields--additional {
+    display: grid;
+    grid-template-columns: repeat(4, 221px);
+    column-gap: 104px;
+  }
 }

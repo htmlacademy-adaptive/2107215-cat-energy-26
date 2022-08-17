@@ -1,11 +1,11 @@
 @import "../variables.scss";
 
 .main-footer {
-  background-color: $color-white;
+  background-color: $color-concrete;
 }
 
-.main-footer--color-concrete {
-  background-color: $color-concrete;
+.main-footer__container-color-white {
+  background-color: $color-white;
 }
 
 .main-footer__wrapper {
@@ -41,7 +41,6 @@
   padding: 26px 20px;
   display: flex;
   justify-content: space-between;
-  background-color: $color-white;
 }
 
 @media (min-width: $tablet-width) {
@@ -50,7 +49,6 @@
   }
 
   .main-footer__container {
-    background-color: $color-white;
     padding: 0 30px;
   }
 
@@ -90,14 +88,15 @@
 @media (min-width: $dekstop-width) {
   .main-footer__container {
     position: absolute;
-    transform: translateX(30%) translateY(30%);
+    right: 50%;
+    transform: translateX(-10%) translateY(95px);
     padding: 0;
+    background-color: $color-white;
   }
 
   .main-footer__contacts {
     min-width: 565px;
     padding: 56px 80px;
-    background: $color-white;
   }
 
   .main-footer__wrapper {

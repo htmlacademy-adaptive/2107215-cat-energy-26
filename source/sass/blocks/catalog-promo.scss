@@ -8,8 +8,7 @@
 
 .catalog-promo__wrapper {
   position: relative;
-  width: 280px;
-  min-height: 290px;
+  height: 100%;
   background-color: rgba(104, 183, 56, 0.85);
   padding: 186px 60px 43px;
 }
@@ -18,4 +17,26 @@
   @include font-arial(14px, 18px);
   color: $color-white;
   text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-promo {
+    background: url("../img/tablet-cat.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  .catalog-promo__wrapper {
+    padding: 71px 124px 69px 422px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .catalog-promo__wrapper {
+    padding: 184px 43px 42px 41px;
+  }
+
+  .catalog-promo {
+    background: url("../img/cat-in-backpack.jpg") no-repeat bottom;
+    background-size: cover;
+  }
 }

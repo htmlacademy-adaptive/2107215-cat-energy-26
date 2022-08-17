@@ -1,24 +1,30 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.field {
-  display: flex;
-  width: 280px;
-}
-
 .field__label {
   @include font-oswald(16px, 18px);
   color: $color-tundora;
-  flex-basis: content;
-  margin-right: 14px;
+  white-space: nowrap;
   text-transform: uppercase;
 }
 
 .field__input {
   @include font-oswald(16px, 18px);
   color: $color-tundora;
-  flex-grow: 1;
-  min-width: 150px;
+  width: 100%;
   align-self: center;
   text-transform: uppercase;
+  margin-left: 13px;
+}
+
+@media (min-width: $tablet-width) {
+  .field__input {
+    @include font-oswald(20px, 30px);
+    padding: 10px 18px 11px;
+    margin-left: 13px;
+  }
+
+  .field__label {
+    @include font-oswald(20px, 30px);
+  }
 }
