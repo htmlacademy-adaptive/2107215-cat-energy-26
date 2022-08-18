@@ -2,15 +2,16 @@
 @import "../mixins.scss";
 
 .card-foot {
-  padding-top: 87px;
-  padding-bottom: 25px;
+  padding: 77px 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 280px;
 }
 
 .card-foot__subtitle {
   @include font-oswald(16px, 20px);
+  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
@@ -24,4 +25,37 @@
   background-color: #f2f2f2;
   color: $color-tundora;
   border: none;
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .card-foot {
+    padding: 161px 39px 39px;
+    border: 2px solid $color-concrete;
+    width: 324px;
+  }
+
+  .card-foot__subtitle {
+    @include font-oswald(20px, 22px);
+    color: $color-cod-gray;
+    max-width: 134px;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+
+  .card-foot__text {
+    @include font-arial(16px, 18px);
+    max-width: 170px;
+    text-align: center;
+    margin-bottom: 87px;
+    color: $color-tundora;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .card-foot {
+    width: 245px;
+    padding: 161px 35px 39px;
+  }
 }

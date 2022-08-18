@@ -1,11 +1,6 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
-.additional-product {
-  padding-top: 13px;
-  padding-bottom: 14px;
-}
-
 .additional-product__characteristics {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -17,6 +12,7 @@
   @include font-oswald(16px, 16px);
   margin-bottom: 13px;
   text-transform: uppercase;
+  color: $color-mine-shaft;
 }
 
 .additional-product__text {
@@ -29,4 +25,53 @@
   color: $color-tundora;
   display: block;
   text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-product__link {
+    width: 100%;
+  }
+
+  .additional-product__title {
+    @include font-oswald(20px, 20px);
+    margin: 0;
+  }
+
+  .additional-product__text {
+    @include font-arial(16px, 20px);
+  }
+
+  .additional-product__price {
+    @include font-arial(16px, 20px);
+  }
+
+  .additional-product__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .additional-product__characteristics {
+    display: flex;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .additional-product__box {
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 273px 288px;
+    column-gap: 52px;
+  }
+
+  .additional-product__link {
+    height: 40px;
+    width: 100%;
+  }
+
+  .additional-product__characteristics {
+    justify-content: space-between;
+    margin: 0;
+  }
 }

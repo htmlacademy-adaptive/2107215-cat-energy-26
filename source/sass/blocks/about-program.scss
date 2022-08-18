@@ -2,10 +2,7 @@
 @import "../variables.scss";
 
 .about-program__wrapper {
-  margin: 0 auto;
-  width: 280px;
-  padding-top: 20px;
-  padding-bottom: 49px;
+  padding: 20px 20px 49px;
 }
 
 .about-program__list {
@@ -14,7 +11,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -25,9 +22,53 @@
 
 .about-program__description {
   @include font-arial(14px, 18px);
+  min-height: 54px;
+  display: flex;
+  align-items: center;
   color: $color-tundora;
 }
 
 .about-program__item {
   padding-left: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .about-program__title {
+    @include font-oswald(60px, 60px);
+    margin-bottom: 32px;
+  }
+
+  .about-program__description {
+    @include font-arial(16px, 24px);
+  }
+
+  .about-program__wrapper {
+    padding: 45px 30px 47px;
+  }
+
+  .about-program__item {
+    padding: 147px 0 56px 0;
+    min-width: 230px;
+  }
+
+  .about-program__list {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    column-gap: 137px;
+    row-gap: 37px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .about-program__wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 71px 0 69px;
+  }
+
+  .about-program__list {
+    grid-template-columns: repeat(4, 248px);
+    column-gap: 76px;
+    row-gap: 37px;
+  }
 }

@@ -7,18 +7,39 @@
 }
 
 .stats__value {
-  @include font-arial(12px, 12px);
-  color: $color-tundora;
+  @include font-oswald(24px, 24px);
+  margin-bottom: 7px;
+  order: -1;
 }
 
 .stats__inner {
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 14px 21px 0;
 }
 
 .stats__description {
-  @include font-oswald(24px, 24px);
-  margin-bottom: 7px;
-  order: -1;
+  @include font-arial(12px, 12px);
+  color: $color-tundora;
+  max-width: 80px;
+}
+
+@media (min-width: $tablet-width) {
+  .stats {
+    min-width: 366px;
+  }
+
+  .stats__value {
+    @include font-oswald(30px, 37px);
+    margin-bottom: 7px;
+  }
+
+  .stats__description {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+
 }

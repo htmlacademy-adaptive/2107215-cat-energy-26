@@ -1,6 +1,8 @@
+@import "../variables.scss";
+
 .main-header__wrapper {
-  width: 280px;
-  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
 }
 
 .main-header__inner {
@@ -9,6 +11,33 @@
   justify-content: space-between;
 }
 
-.main-header__toggle {
-  position: relative;
+@media (min-width: $tablet-width) {
+  .main-header__wrapper {
+    min-height: 76px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-header__toggle {
+    position: relative;
+    display: none;
+  }
+
+  .main-header__cat-logo {
+    margin-right: 12px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .main-header__cat-logo {
+    margin-right: 14px;
+  }
+
+  .main-header__wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 53px 0 0 0;
+  }
 }
