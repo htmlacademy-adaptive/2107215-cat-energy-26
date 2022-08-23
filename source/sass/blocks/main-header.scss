@@ -9,6 +9,67 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0 17px;
+}
+
+.main-header__toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.main-header--open .main-header__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: $color-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-header--closed .main-header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: $color-black;
+  box-shadow: 0 8px 0 0 $color-black, 0 16px 0 0 $color-black;
+}
+
+.main-header--nojs .main-header__toggle {
+  display: none;
+}
+
+.main-header--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-header--closed .main-nav__item {
+    display: none;
+  }
+}
+
+.main-header--nojs .main-nav__item {
+  display: block;
 }
 
 @media (min-width: $tablet-width) {

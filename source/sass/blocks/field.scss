@@ -15,6 +15,34 @@
   align-self: center;
   text-transform: uppercase;
   margin-left: 13px;
+  padding: 13px 14px 13px;
+  border: 1px solid $color-mercury;
+}
+
+.field--mail {
+  position: relative;
+
+  &::before {
+    content: "";
+    right: 15px;
+    position: absolute;
+    background: url("../img/mail-icon.svg") no-repeat center;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.field--phone {
+  position: relative;
+
+  &::before {
+    content: "";
+    right: 13px;
+    position: absolute;
+    background: url("../img/phone-icon.svg") no-repeat center;
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (min-width: $tablet-width) {

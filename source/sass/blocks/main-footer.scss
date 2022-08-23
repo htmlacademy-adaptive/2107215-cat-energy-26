@@ -35,6 +35,8 @@
   margin: 0;
   padding: 0;
   margin-bottom: 43px;
+  display: flex;
+  column-gap: 24px;
 }
 
 .main-footer__contacts {
@@ -66,6 +68,7 @@
 
   .main-footer__link-logo-cat {
     margin: 0;
+    width: 139px;
   }
 
   .main-footer__social {
@@ -82,6 +85,8 @@
 
   .main-footer__link-logo-html {
     margin-right: 22px;
+    display: flex;
+    align-items: center;
   }
 }
 

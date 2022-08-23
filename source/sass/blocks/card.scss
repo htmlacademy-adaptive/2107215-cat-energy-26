@@ -2,7 +2,8 @@
 @import "../variables.scss";
 
 .card__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .card__link {
@@ -15,6 +16,7 @@
   @include font-oswald(16px, 20px);
   text-transform: uppercase;
   margin-bottom: 18px;
+  width: 90px;
 }
 
 .card__list {
@@ -39,6 +41,14 @@
 }
 
 @media (min-width: $tablet-width) {
+  .card__wrapper {
+    display: flex;
+  }
+
+  .card__inner {
+    width: 100%;
+  }
+
   .card__link-image {
     position: absolute;
     display: none;
@@ -46,6 +56,7 @@
 
   .card__list-box {
     padding: 7px 0;
+    border-bottom: 1px solid $color-silver;
   }
 
   .card__title {
@@ -53,6 +64,7 @@
     margin-bottom: 21px;
     padding: 0 58px;
     text-align: center;
+    width: 100%;
   }
 
   .card__name {
