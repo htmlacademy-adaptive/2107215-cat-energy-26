@@ -51,7 +51,7 @@
     position: absolute;
     top: 50%;
     left: 199px;
-    width: 1000%;
+    width: 10000%;
     height: 2px;
     z-index: -1;
     background-color: $color-apple;
@@ -70,7 +70,7 @@
     position: absolute;
     top: 50%;
     left: 141px;
-    width: 1000%;
+    width: 10000%;
     height: 2px;
     z-index: -1;
     background-color: $color-apple;
@@ -89,7 +89,7 @@
     position: absolute;
     top: 50%;
     left: 162px;
-    width: 1000%;
+    width: 10000%;
     height: 2px;
     z-index: -1;
     background-color: $color-apple;
@@ -202,7 +202,7 @@
     background-color: $color-white;
 
     &::before {
-      left: -100%;
+      left: -1000%;
     }
   }
 
@@ -213,7 +213,7 @@
     background-color: $color-white;
 
     &::before {
-      left: -100%;
+      left: -1000%;
     }
   }
 
@@ -224,7 +224,7 @@
     background-color: $color-white;
 
     &::before {
-      left: -100%;
+      left: -1000%;
     }
   }
 

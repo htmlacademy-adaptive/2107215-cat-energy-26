@@ -120,18 +120,18 @@ br {
     column-gap: 50px;
     padding-right: 75px;
     justify-content: space-between;
-    counter-reset: namber 0;
+    counter-reset: number 0;
   }
 
   .about-program__item {
     width: 249px;
     padding: 118px 0 56px 0;
-    counter-increment: namber;
+    counter-increment: number;
     position: relative;
 
     &::after {
       @include font-oswald(280px, 210px);
-      content: counter(namber);
+      content: counter(number);
       position: absolute;
       top: 0;
       left: 47%;

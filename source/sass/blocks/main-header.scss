@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.main-header__logo-tablet {
+  display: none;
+}
+
 .main-header__inner {
   display: flex;
   align-items: center;
@@ -73,6 +77,17 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-header__logo-mobile {
+    display: none;
+  }
+
+  .main-header__logo-tablet {
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+  }
+
   .main-header__wrapper {
     min-height: 76px;
     padding: 0 30px;
@@ -85,17 +100,9 @@
     position: relative;
     display: none;
   }
-
-  .main-header__cat-logo {
-    margin-right: 12px;
-  }
 }
 
 @media (min-width: $dekstop-width) {
-  .main-header__cat-logo {
-    margin-right: 14px;
-  }
-
   .main-header__wrapper {
     max-width: 1220px;
     margin: 0 auto;
