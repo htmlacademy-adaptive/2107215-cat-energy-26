@@ -75,17 +75,6 @@
     padding-right: 36px;
     width: 420px;
     background-color: $color-white;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: -100%;
-      width: 1000%;
-      height: 2px;
-      z-index: -1;
-      background-color: $color-apple;
-    }
   }
 
   .additional-products__list {

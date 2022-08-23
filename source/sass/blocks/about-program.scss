@@ -39,48 +39,9 @@ br {
   min-height: 60px;
 }
 
-.about-program__item--leaf-icon {
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background: url("../img/about-program-icon/leaf-icon.svg") no-repeat center;
-    background-size: 30px 32px;
-    background-color: $color-apple;
-  }
-}
-
-.about-program__item--tub-icon {
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background: url("../img/about-program-icon/tub-icon.svg") no-repeat center;
-    background-size: 29px 31px;
-    background-color: $color-apple;
-  }
-}
-
-.about-program__item--eat-icon {
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    background: url("../img/about-program-icon/eat-icon.svg") no-repeat center;
-    background-size: 25px 30px;
-    background-color: $color-apple;
-  }
-}
-
+.about-program__item--leaf-icon,
+.about-program__item--tub-icon,
+.about-program__item--eat-icon,
 .about-program__item--alarm-icon {
   &::before {
     position: absolute;
@@ -89,14 +50,42 @@ br {
     left: 0;
     width: 60px;
     height: 60px;
-    background: url("../img/about-program-icon/alarm-icon.svg") no-repeat center;
-    background-size: 32px 33px;
     background-color: $color-apple;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.about-program__item--leaf-icon {
+  &::before {
+    background-image: url("../img/about-program-icon/leaf-icon.svg");
+    background-size: 30px 32px;
+  }
+}
+
+.about-program__item--tub-icon {
+  &::before {
+    background-image: url("../img/about-program-icon/tub-icon.svg");
+    background-size: 29px 31px;
+  }
+}
+
+.about-program__item--eat-icon {
+  &::before {
+    background-image: url("../img/about-program-icon/eat-icon.svg");
+    background-size: 25px 30px;
+  }
+}
+
+.about-program__item--alarm-icon {
+  &::before {
+    background-image: url("../img/about-program-icon/alarm-icon.svg");
+    background-size: 32px 33px;
   }
 }
 
 @media (min-width: $tablet-width) {
-  br {
+  .about-program__description-br {
     display: block;
   }
 
