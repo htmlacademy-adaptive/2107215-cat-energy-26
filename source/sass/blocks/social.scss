@@ -5,7 +5,9 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
   min-width: 28px;
   min-height: 22px;
+  justify-content: center;
+  align-items: center;
 }

@@ -27,6 +27,28 @@
   text-transform: uppercase;
 }
 
+.control__input:checked + .checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-14px) translateX(-13px);
+  width: 100%;
+  height: 100%;
+  background: url("../img/arrow.svg") no-repeat center;
+}
+
+.control__input:checked + .radio::before {
+  position: absolute;
+  top: 8.28px;
+  left: 8.25px;
+  width: 13px;
+  height: 13px;
+  background-color: #68b738;
+  border-radius: 50%;
+  content: "";
+}
+
 @media (min-width: $tablet-width) {
   .control__text {
     @include font-oswald(20px, 30px);

@@ -1,14 +1,6 @@
 @import "../variables.scss";
 @import "../mixins.scss";
 
-.main-nav__wrapper {
-  width: 100%;
-  position: absolute;
-  right: 0;
-  background-color: $color-white;
-  display: none;
-}
-
 .main-nav__list {
   padding: 0;
   margin: 0;
@@ -27,17 +19,30 @@
   text-align: center;
 }
 
-@media (min-width: $tablet-width) {
-  .main-nav__wrapper {
-    position: static;
-    display: block;
-  }
+.main-nav__wrapper {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  background-color: $color-white;
+  z-index: 1;
+}
 
+@media (max-width: $mobile-width-only) {
+  .main-nav__item {
+    border-top: 1px solid $color-mercury;
+  }
+}
+
+@media (min-width: $tablet-width) {
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     min-width: 440px;
+  }
+
+  .main-nav__wrapper {
+    position: static;
   }
 
   .main-nav__link {

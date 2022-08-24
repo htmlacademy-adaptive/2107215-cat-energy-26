@@ -7,10 +7,22 @@
 }
 
 .catalog-promo__wrapper {
-  position: relative;
   height: 100%;
   background-color: rgba(104, 183, 56, 0.85);
   padding: 186px 60px 43px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-40px);
+    background: url("../img/gift-icon.svg") no-repeat center;
+    background-size: 78px 80px;
+  }
 }
 
 .catalog-promo__text {
@@ -27,12 +39,24 @@
 
   .catalog-promo__wrapper {
     padding: 71px 124px 69px 422px;
+
+    &::after {
+      content: "";
+      top: 25%;
+      left: 17%;
+    }
   }
 }
 
 @media (min-width: $dekstop-width) {
   .catalog-promo__wrapper {
     padding: 184px 43px 42px 41px;
+
+    &::after {
+      content: "";
+      top: 55px;
+      left: 50%;
+    }
   }
 
   .catalog-promo {

@@ -1,6 +1,10 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.form-program {
+  overflow-x: hidden;
+}
+
 .form-program__wrapper {
   padding: 0 20px 32px;
 }
@@ -17,6 +21,24 @@
   @include font-oswald(14px, 18px);
   text-transform: uppercase;
   margin-bottom: 14px;
+}
+
+
+@media (max-width: $mobile-width-only) {
+  .form-program__header {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 1000%;
+      height: 1px;
+      z-index: -1;
+      background-color: $color-alto;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {

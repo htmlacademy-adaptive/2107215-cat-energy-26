@@ -5,6 +5,10 @@
   padding: 20px 20px 49px;
 }
 
+br {
+  display: none;
+}
+
 .about-program__list {
   padding: 0;
   margin: 0;
@@ -26,16 +30,68 @@
   display: flex;
   align-items: center;
   color: $color-tundora;
+  position: relative;
 }
 
 .about-program__item {
   padding-left: 80px;
+  position: relative;
+  min-height: 60px;
+}
+
+.about-program__item--leaf-icon,
+.about-program__item--tub-icon,
+.about-program__item--eat-icon,
+.about-program__item--alarm-icon {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-apple;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.about-program__item--leaf-icon {
+  &::before {
+    background-image: url("../img/about-program-icon/leaf-icon.svg");
+    background-size: 30px 32px;
+  }
+}
+
+.about-program__item--tub-icon {
+  &::before {
+    background-image: url("../img/about-program-icon/tub-icon.svg");
+    background-size: 29px 31px;
+  }
+}
+
+.about-program__item--eat-icon {
+  &::before {
+    background-image: url("../img/about-program-icon/eat-icon.svg");
+    background-size: 25px 30px;
+  }
+}
+
+.about-program__item--alarm-icon {
+  &::before {
+    background-image: url("../img/about-program-icon/alarm-icon.svg");
+    background-size: 32px 33px;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .about-program__description-br {
+    display: block;
+  }
+
   .about-program__title {
     @include font-oswald(60px, 60px);
-    margin-bottom: 32px;
+    margin-bottom: 82px;
   }
 
   .about-program__description {
@@ -46,16 +102,31 @@
     padding: 45px 30px 47px;
   }
 
-  .about-program__item {
-    padding: 147px 0 56px 0;
-    min-width: 230px;
+  .about-program__list {
+    row-gap: 65px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    padding-right: 75px;
+    justify-content: space-between;
+    counter-reset: number 0;
   }
 
-  .about-program__list {
-    display: grid;
-    grid-template-columns: repeat(2, 250px);
-    column-gap: 137px;
-    row-gap: 37px;
+  .about-program__item {
+    width: 249px;
+    padding: 118px 0 56px 0;
+    counter-increment: number;
+    position: relative;
+
+    &::after {
+      @include font-oswald(280px, 210px);
+      content: counter(number);
+      position: absolute;
+      top: 0;
+      left: 47%;
+      z-index: -1;
+      color: $color-concrete;
+    }
   }
 }
 
@@ -67,8 +138,8 @@
   }
 
   .about-program__list {
-    grid-template-columns: repeat(4, 248px);
-    column-gap: 76px;
+    padding-right: 0;
+    column-gap: 70px;
     row-gap: 37px;
   }
 }

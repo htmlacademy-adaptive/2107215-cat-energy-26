@@ -14,13 +14,39 @@
 .nutrition-program__item {
   background-color: $color-concrete;
   padding: 30px 33px 20px 20px;
+  position: relative;
+}
+
+.nutrition-program__item--cat-slim {
+  &::before {
+    position: absolute;
+    top: 21px;
+    content: "";
+    width: 50px;
+    height: 53px;
+    background: url("../img/nutrition-program-icon/cat-slim.svg") no-repeat center;
+    background-size: contain;
+  }
+}
+
+.nutrition-program__item--cat-pro {
+  &::before {
+    position: absolute;
+    top: 24px;
+    transform: translateX(-13px);
+    content: "";
+    width: 67px;
+    height: 50px;
+    background: url("../img/nutrition-program-icon/cat-pro.svg") no-repeat center;
+    background-size: contain;
+  }
 }
 
 .nutrition-program__title {
   @include font-oswald(24px, 37px);
-  text-align: center;
   margin-bottom: 29px;
   text-transform: uppercase;
+  padding-left: 71px;
 }
 
 .nutrition-program__description {
@@ -34,6 +60,19 @@
   text-transform: uppercase;
   color: $color-black;
   text-decoration: none;
+  padding-right: 43px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 12px;
+    top: 50%;
+    transform: translateY(-6px);
+    right: 0;
+    background: url("../img/nutrition-program-icon/arrow-icon.svg") no-repeat;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -44,6 +83,25 @@
 
   .nutrition-program__item {
     padding: 77px 316px 53px 52px;
+  }
+
+  .nutrition-program__item--cat-slim {
+    &::before {
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      right: 62px;
+    }
+  }
+
+  .nutrition-program__item--cat-pro {
+    &::before {
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      right: 28px;
+      transform: translateX(0);
+    }
   }
 
   .nutrition-program__title {
@@ -59,6 +117,7 @@
 
   .nutrition-program__link {
     @include font-oswald(20px, 30px);
+    padding-right: 57px;
   }
 }
 
@@ -78,9 +137,28 @@
     padding: 77px 51px 55px 52px;
   }
 
+  .nutrition-program__item--cat-slim {
+    &::before {
+      width: 100px;
+      height: 106px;
+      top: 41px;
+      left: 48px;
+    }
+  }
+
+  .nutrition-program__item--cat-pro {
+    &::before {
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 33px;
+    }
+  }
+
   .nutrition-program__title {
     @include font-oswald(36px, 36px);
-    text-align: center;
+    text-align: left;
+    padding-left: 165px;
     margin-bottom: 73px;
   }
 

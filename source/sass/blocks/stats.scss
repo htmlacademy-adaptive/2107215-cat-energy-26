@@ -26,20 +26,39 @@
 }
 
 @media (min-width: $tablet-width) {
+  .stats__inner {
+    padding: 14px 20px 20px;
+    border: 1px solid $color-silver;
+    border-radius: 5px;
+    min-width: 162px;
+    position: relative;
+  }
+
   .stats {
     min-width: 366px;
   }
 
   .stats__value {
     @include font-oswald(30px, 37px);
-    margin-bottom: 7px;
   }
 
   .stats__description {
-    max-width: 150px;
+    min-width: 132px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: 7%;
+    background-color: $color-white;
   }
 }
 
 @media (min-width: $dekstop-width) {
-
+  .stats__description {
+    min-width: 132px;
+    position: absolute;
+    bottom: -5px;
+    left: 7%;
+    background-color: $color-concrete;
+  }
 }

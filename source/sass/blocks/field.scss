@@ -1,6 +1,10 @@
 @import "../mixins.scss";
 @import "../variables.scss";
 
+.field {
+  position: relative;
+}
+
 .field__label {
   @include font-oswald(16px, 18px);
   color: $color-tundora;
@@ -15,6 +19,21 @@
   align-self: center;
   text-transform: uppercase;
   margin-left: 13px;
+  padding: 13px 14px 13px;
+  border: 1px solid $color-mercury;
+}
+
+.field__mail {
+  right: 15px;
+  position: absolute;
+  background: url("../img/mail-icon.svg") no-repeat;
+}
+
+
+.field__phone {
+  right: 13px;
+  position: absolute;
+  background: url("../img/phone-icon.svg") no-repeat;
 }
 
 @media (min-width: $tablet-width) {
