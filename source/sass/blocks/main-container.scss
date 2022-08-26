@@ -2,8 +2,13 @@
 @import "../mixins.scss";
 
 .main-container {
-  background: url("../img/cat-image.jpg") no-repeat top;
-  background-size: 100% 302px;
+  background: url("../img/index-cat/licking-cat.jpg") no-repeat;
+  background-position: top;
+  background-size: 320px 302px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-cat/licking-cat@2x.jpg");
+  }
 }
 
 .main-container__header {
@@ -14,16 +19,13 @@
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    transform: translateY(51%) translateX(-7%);
-    width: 100%;
-    height: 270px;
-    background: url("../img/cat-food.png") no-repeat center;
-    background-size: 280px 270px;
-  }
+.main-container__image {
+  position: absolute;
+  transform: translateX(-140px);
+  top: 167px;
+  left: 50%;
 }
 
 .main-container__title {
@@ -48,13 +50,17 @@
   margin-top: auto;
 }
 
-.main-container__image {
-  margin: 0 auto;
-}
-
 @media (min-width: $tablet-width) {
   .main-container {
     background: none;
+  }
+
+  .main-container__image {
+    transform: translateX(-354.5px);
+    top: 235px;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
   }
 
   .main-container__wrapper {
@@ -65,19 +71,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 62px 30px 30px 87px;
+    padding: 40px 30px 30px 87px;
     background-image: none;
     min-height: 872px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      background: url("../img/index-can-tablet.png") no-repeat center;
-      width: 100%;
-      height: 100%;
-      transform: translateY(9%) translateX(-13%);
-    }
   }
 
   .main-container__title {
@@ -85,6 +81,7 @@
     text-align: left;
     margin-bottom: 41px;
     color: $color-black;
+    width: 500px;
   }
 
   .main-container__slogan {
@@ -104,6 +101,7 @@
 
 @media (min-width: $dekstop-width) {
   .main-container__wrapper {
+    padding: 0;
     margin: 0 auto;
     max-width: 1220px;
 
@@ -115,25 +113,28 @@
       top: 0;
       right: 0;
       background: linear-gradient($color-apple-transparency, $color-apple-transparency),
-        url("../img/index-cat-desktop.jpg") no-repeat center top;
+        url("../img/index-cat/licking-cat-desktop.jpg") no-repeat center top;
       background-size: cover;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background: linear-gradient($color-apple-transparency, $color-apple-transparency),
+          url("../img/index-cat/licking-cat-desktop@2x.jpg");
+        background-size: cover;
+      }
     }
+  }
+
+  .main-container__image {
+    transform: translateX(-170px);
+    top: 25px;
+    z-index: -1;
+    width: 552px;
+    height: 499px;
   }
 
   .main-container__header {
     padding: 100px 80px 80px;
     min-height: 660px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      background: url("../img/index-foot-desktop.png") no-repeat center;
-      background-size: 552px 499px;
-      width: 100%;
-      height: 100%;
-      transform: translateY(-25%) translateX(3%);
-    }
   }
 }

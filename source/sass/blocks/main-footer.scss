@@ -4,6 +4,28 @@
   background-color: $color-concrete;
 }
 
+.main-footer__html-logo-image,
+.main-footer__html-academy {
+  fill: $color-dove-gray;
+}
+
+.main-footer__html-logo {
+  fill: $color-tundora;
+}
+
+.main-footer__link-logo-html:hover .main-footer__html-logo-image,
+.main-footer__link-logo-html:hover .main-footer__html-academy,
+.main-footer__link-logo-html:hover .main-footer__html-logo {
+  fill: $color-apple;
+}
+
+.main-footer__link-logo-html:active .main-footer__html-logo-image,
+.main-footer__link-logo-html:active .main-footer__html-academy,
+.main-footer__link-logo-html:active .main-footer__html-logo {
+  fill: $color-apple;
+  opacity: 0.3;
+}
+
 .main-footer__container-color-white {
   background-color: $color-white;
 }
@@ -31,6 +53,10 @@
   margin-bottom: 52px;
 }
 
+.main-footer__link-logo-cat:active {
+  opacity: 0.6;
+}
+
 .main-footer__social {
   margin: 0;
   padding: 0;
@@ -51,7 +77,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-footer__logo-html {
+  .main-footer__html-logo-image,
+  .main-footer__html-logo {
     display: none;
   }
 

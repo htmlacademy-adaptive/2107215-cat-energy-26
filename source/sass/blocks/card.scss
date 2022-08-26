@@ -9,7 +9,7 @@
 .card__link {
   margin: 0 auto;
   width: 100%;
-  margin-top: auto;
+  // margin-top: auto;
 }
 
 .card__title {
@@ -43,6 +43,8 @@
 @media (min-width: $tablet-width) {
   .card__wrapper {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
   }
 
   .card__inner {
@@ -50,8 +52,14 @@
   }
 
   .card__link-image {
-    position: absolute;
-    display: none;
+    width: 100%;
+    margin-bottom: 34px;
+    text-align: center;
+  }
+
+  .card__image {
+    width: 161px;
+    height: 172px;
   }
 
   .card__list-box {
@@ -62,7 +70,7 @@
   .card__title {
     @include font-oswald(20px, 24px);
     margin-bottom: 21px;
-    padding: 0 58px;
+    padding: 0 43px;
     text-align: center;
     width: 100%;
   }
