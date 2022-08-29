@@ -63,6 +63,21 @@
     padding: 161px 39px 39px;
     border: 2px solid $color-concrete;
     max-width: 500px;
+    max-height: 429px;
+
+    &::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      transform: translateX(-30px);
+    }
+  }
+
+  .card-foot--margin {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 
   .card-foot__subtitle {

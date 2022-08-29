@@ -12,48 +12,83 @@
 
 .example-program__image-before {
   position: absolute;
-  width: 280px;
-  height: 256px;
   left: 50%;
   transform: translateX(-155px);
   clip-path: inset(0 50% 0 0);
-  background: url("../img/cat-fat.png") no-repeat center;
-  background-size: 280px 256px;
 }
 
 .example-program__image-after {
   position: absolute;
-  width: 280px;
-  height: 256px;
-  clip-path: inset(0 0 0 45%);
-  background: url("../img/cat-skinny.png") no-repeat center;
-  background-size: 280px 256px;
+  clip-path: inset(0 0 0 50%);
   left: 50%;
-  transform: translateX(-140px);
+  transform: translateX(-153px);
 }
 
 .example-program__button {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(-40px) translateY(105px);
-  background-color: transparent;
-  border: none;
+  transform: translateX(-35px) translateY(105px);
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: $color-white;
+  border-radius: 50%;
+  border: 2px solid $color-dov-gray;
 
+  &::before,
   &::after {
     content: "";
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-2px) translateY(-128px);
     width: 4px;
-    height: 256px;
+    height: 108px;
     background-color: $color-dov-gray;
-    border-radius: 2px;
+  }
+
+  &::before {
+    transform: translateX(-2px) translateY(-38px);
+    left: 50%;
+    bottom: 0;
+    border-radius: 2px 2px 0 0;
+  }
+
+  &::after {
+    transform: translateX(2px) translateY(37px);
+    right: 50%;
+    top: 0;
+    border-radius: 0 0 2px 2px;
   }
 }
 
+.example-program__button:hover {
+  border-color: $color-apple;
+}
+
+.example-program__button:active {
+  border-color: $color-apple;
+  opacity: 0.6;
+}
+
+.example-program__button:hover::before,
+.example-program__button:hover::after {
+  background-color: $color-apple;
+}
+
+.example-program__button:active::before,
+.example-program__button:active::after {
+  background-color: $color-apple;
+  opacity: 0.6;
+}
+
+
+.example-program__switch {
+  fill: $color-dov-gray;
+  vertical-align: middle;
+}
+
+.example-program__button:hover .example-program__switch {
+  fill: $color-apple;
+}
 
 .example-program__wrapper {
   padding: 25px 20px 40px;
@@ -92,41 +127,27 @@
   }
 
   .example-program__image-before {
-    clip-path: inset(0 50% 0 0);
+    transform: translateX(-295px);
     width: 560px;
     height: 512px;
-    background-size: 560px 512px;
-    transform: translateX(-295px);
   }
 
   .example-program__image-after {
-    margin: 0 auto;
-    clip-path: inset(0 0 0 45%);
+    transform: translateX(-295px);
     width: 560px;
     height: 512px;
-    background-size: 560px 512px;
-    transform: translateX(-265px);
   }
 
   .example-program__button {
-    position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translateX(-40px) translateY(-20px);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+    transform: translateX(-36px) translateY(-20px);
+
+    &::before {
+      height: 236px;
+    }
 
     &::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translateX(-2px) translateY(-256px);
-      width: 4px;
-      height: 512px;
-      background-color: $color-dov-gray;
-      border-radius: 2px;
+      height: 236px;
     }
   }
 

@@ -4,6 +4,34 @@
   background-color: $color-concrete;
 }
 
+.main-footer__map {
+  width: 100%;
+  border: 0;
+  height: 362px;
+}
+
+.main-footer__html-logo-image,
+.main-footer__html-academy {
+  fill: $color-dove-gray;
+}
+
+.main-footer__html-logo {
+  fill: $color-tundora;
+}
+
+.main-footer__link-logo-html:hover .main-footer__html-logo-image,
+.main-footer__link-logo-html:hover .main-footer__html-academy,
+.main-footer__link-logo-html:hover .main-footer__html-logo {
+  fill: $color-apple;
+}
+
+.main-footer__link-logo-html:active .main-footer__html-logo-image,
+.main-footer__link-logo-html:active .main-footer__html-academy,
+.main-footer__link-logo-html:active .main-footer__html-logo {
+  fill: $color-apple;
+  opacity: 0.3;
+}
+
 .main-footer__container-color-white {
   background-color: $color-white;
 }
@@ -16,10 +44,6 @@
   background-color: $color-concrete;
 }
 
-.main-footer__map {
-  height: 362px;
-}
-
 .main-footer__link-logo-html {
   width: 100%;
   display: flex;
@@ -29,6 +53,10 @@
 
 .main-footer__link-logo-cat {
   margin-bottom: 52px;
+}
+
+.main-footer__link-logo-cat:active {
+  opacity: 0.6;
 }
 
 .main-footer__social {
@@ -51,7 +79,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-footer__logo-html {
+  .main-footer__html-logo-image,
+  .main-footer__html-logo {
     display: none;
   }
 
