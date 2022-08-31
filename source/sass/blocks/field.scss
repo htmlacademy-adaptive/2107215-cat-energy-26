@@ -18,29 +18,64 @@
   width: 100%;
   align-self: center;
   text-transform: uppercase;
-  margin-left: 13px;
-  padding: 13px 14px 13px;
-  border: 1px solid $color-mercury;
+  margin-left: 12px;
+  padding: 14px 14px 14px;
+  border: none;
+  outline: 1px solid $color-mercury;
+}
+
+.field__input:invalid:not(:placeholder-shown) {
+  outline: 1px solid $color-vivid-tangerine;
+}
+
+.field__input:invalid:not(:placeholder-shown) ~ .field__mail,
+.field__input:invalid:not(:placeholder-shown) + .field__phone {
+  stroke: $color-vivid-tangerine;
 }
 
 .field__mail {
   right: 15px;
   position: absolute;
-  background: url("../img/mail-icon.svg") no-repeat;
+  stroke: $color-mine-shaft;
 }
 
+.field__input:focus:not(.field__input:disabled) {
+  outline: 2px solid $color-tundora;
+}
+
+.field__input:hover:not(.field__input:disabled) {
+  outline-color: $color-silver;
+}
+
+.field__input:focus:not(.field__input:disabled) ~ .field__mail {
+  stroke: $color-apple;
+}
+
+.field__input:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.field__input:focus:not(.field__input:disabled) ~ .field__phone {
+  fill: $color-apple;
+}
+
+.field__input:disabled ~ .field__mail,
+.field__input:disabled ~ .field__phone {
+  opacity: 0.3;
+}
 
 .field__phone {
   right: 13px;
   position: absolute;
-  background: url("../img/phone-icon.svg") no-repeat;
+  fill: $color-mine-shaft;
 }
 
 @media (min-width: $tablet-width) {
   .field__input {
     @include font-oswald(20px, 30px);
-    padding: 10px 18px 11px;
-    margin-left: 13px;
+    padding: 10px 20px 10px;
+    margin-left: 18px;
   }
 
   .field__label {

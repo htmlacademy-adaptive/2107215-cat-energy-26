@@ -37,7 +37,7 @@
 }
 
 .main-footer__wrapper {
-  padding: 40px 20px 22px;
+  padding: 38px 20px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@
 }
 
 .main-footer__link-logo-cat {
-  margin-bottom: 52px;
+  margin-bottom: 46px;
 }
 
 .main-footer__link-logo-cat:active {
@@ -97,13 +97,13 @@
   }
 
   .main-footer__contacts {
-    padding: 56px 40px;
+    padding: 56px 40px 59px;
     display: flex;
   }
 
   .main-footer__link-logo-cat {
     margin: 0;
-    width: 139px;
+    width: 152px;
   }
 
   .main-footer__social {
@@ -112,14 +112,14 @@
   }
 
   .main-footer__link-logo-html {
-    width: 170px;
+    width: 163px;
   }
 
   .main-footer__wrapper {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 57px 30px;
+    padding: 54px 30px;
   }
 }
 

@@ -13,7 +13,7 @@
 .example-program__image-before {
   position: absolute;
   left: 50%;
-  transform: translateX(-155px);
+  transform: translateX(-141px);
   clip-path: inset(0 50% 0 0);
 }
 
@@ -21,14 +21,14 @@
   position: absolute;
   clip-path: inset(0 0 0 50%);
   left: 50%;
-  transform: translateX(-153px);
+  transform: translateX(-141px);
 }
 
 .example-program__button {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(-35px) translateY(105px);
+  transform: translateX(-19px) translateY(105px);
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -91,7 +91,7 @@
 }
 
 .example-program__wrapper {
-  padding: 25px 20px 40px;
+  padding: 25px 20px 37px;
 }
 
 .example-program__title {
@@ -107,7 +107,7 @@
 
 .example-program__calculation {
   @include font-oswald(14px, 20px);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
@@ -120,6 +120,14 @@
   margin-bottom: 20px;
 }
 
+.example-program__calculation-description {
+  margin-right: 3px;
+}
+
+.example-program__calculation-value {
+  margin: 0;
+}
+
 @media (min-width: $tablet-width) {
   .example-program__prorgess {
     position: relative;
@@ -127,20 +135,20 @@
   }
 
   .example-program__image-before {
-    transform: translateX(-295px);
+    transform: translateX(-282px) translateY(-3px);
     width: 560px;
     height: 512px;
   }
 
   .example-program__image-after {
-    transform: translateX(-295px);
+    transform: translateX(-282px) translateY(-3px);
     width: 560px;
     height: 512px;
   }
 
   .example-program__button {
     top: 50%;
-    transform: translateX(-36px) translateY(-20px);
+    transform: translateX(-20px) translateY(-22px);
 
     &::before {
       height: 236px;
@@ -152,7 +160,7 @@
   }
 
   .example-program {
-    background: linear-gradient($color-white 60%, $color-gallery 60%);
+    background: linear-gradient($color-white 56.9%, $color-gallery 56.9%);
   }
 
   .example-program__wrapper {
@@ -197,7 +205,7 @@
 
 @media (min-width: $dekstop-width) {
   .example-program {
-    background: linear-gradient($color-white 20%, $color-concrete 20%);
+    background: linear-gradient($color-white 22%, $color-concrete 22%);
   }
 
   .example-program__wrapper {
@@ -209,6 +217,7 @@
   }
 
   .example-program__prorgess {
+    right: 22px;
     position: relative;
     height: 512px;
     width: 512px;

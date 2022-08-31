@@ -21,7 +21,7 @@
 
 .about-program__title {
   @include font-oswald(36px, 40px);
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .about-program__description {
@@ -85,13 +85,23 @@
 }
 
 @media (min-width: $tablet-width) {
+  .about-program__item--leaf-icon,
+  .about-program__item--tub-icon,
+  .about-program__item--eat-icon,
+  .about-program__item--alarm-icon {
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
   .about-program__description-br {
     display: block;
   }
 
   .about-program__title {
     @include font-oswald(60px, 60px);
-    margin-bottom: 82px;
+    margin-bottom: 75px;
   }
 
   .about-program__description {

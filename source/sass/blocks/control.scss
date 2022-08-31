@@ -38,6 +38,24 @@
   background: url("../img/arrow.svg") no-repeat center;
 }
 
+.control__input:focus ~ .control__mark {
+  border-color: $color-mine-shaft;
+}
+
+.control__input:hover ~ .control__mark {
+  border-color: $color-silver-two;
+}
+
+.control__input:disabled ~ .control__text {
+  opacity: 0.3;
+}
+
+.control__input:disabled ~ .control__mark {
+  border-color: $color-silver-two;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 .control__input:checked + .radio::before {
   position: absolute;
   top: 8.28px;
@@ -56,5 +74,26 @@
 
   .control__text--additional {
     color: $color-black;
+  }
+
+  .control__mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .control__label {
+    padding-left: 60px;
+  }
+
+  .control__input:checked + .radio::before {
+    width: 18px;
+    height: 18px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .control__input:checked + .checkbox::before {
+    transform: translateY(-19px) translateX(-18px);
+    background-size: 26px 26px;
   }
 }

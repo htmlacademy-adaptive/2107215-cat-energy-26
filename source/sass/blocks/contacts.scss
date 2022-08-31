@@ -28,10 +28,12 @@
   .contacts__text {
     @include font-arial(16px, 20px);
     margin-bottom: 18px;
+    text-align: end;
   }
 
   .contacts__text-city {
     @include font-arial(16px, 20px);
+    text-align: end;
   }
 
   .contacts__box {
