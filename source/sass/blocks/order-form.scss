@@ -8,7 +8,7 @@
 }
 
 .order-form__fieldset--personal {
-  margin-bottom: 26px;
+  margin-bottom: 23px;
 }
 
 .order-form__fields {
@@ -17,7 +17,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  gap: 11px;
+  gap: 14px;
 }
 
 .order-form__fields-radio {
@@ -31,11 +31,6 @@
 .order-form__fieldset--program {
   padding: 23px 0 18px;
   margin-bottom: 27px;
-}
-
-.order-form__fields--contacts .field__input {
-  border: 1px solid $color-silver;
-  padding-right: 40px;
 }
 
 .order-form__fieldset--contacts {
@@ -78,7 +73,7 @@
 }
 
 .order-form__fieldset--additional {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .order-form__title--additional {
@@ -158,8 +153,12 @@
 @media (min-width: $tablet-width) {
   .order-form__fieldset--program {
     padding: 25px 28px;
-    margin-bottom: 71px;
+    margin-bottom: 80px;
     border: 1px solid $color-mercury;
+  }
+
+  .order-form__fields--program {
+    gap: 23px;
   }
 
   .order-form__fieldset--personal {
@@ -182,7 +181,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 10%;
-    row-gap: 32px;
+    row-gap: 40px;
   }
 
   .order-form__fields--additional .order-form__fields-item {
@@ -200,6 +199,7 @@
     padding-right: 42px;
     padding-left: 39px;
     background-color: $color-white;
+    margin-bottom: 70px;
 
     &::before {
       left: -1000%;
@@ -211,6 +211,7 @@
     padding-right: 38px;
     padding-left: 39px;
     background-color: $color-white;
+    margin-bottom: 72px;
 
     &::before {
       left: -1000%;
@@ -222,6 +223,7 @@
     padding-right: 41px;
     padding-left: 40px;
     background-color: $color-white;
+    margin-bottom: 63px;
 
     &::before {
       left: -1000%;
@@ -231,23 +233,29 @@
   .order-form__textarea {
     @include font-oswald(20px, 30px);
     min-height: 174px;
-    width: 631px;
     padding: 9px 12px 9px 15px;
   }
 
   .order-form__button {
+    @include font-oswald(20px, 20px);
     display: inline-block;
     margin: 0;
+    padding: 19px;
     margin-right: 61px;
     width: 282px;
   }
 
   .order-form__note {
+    @include font-arial(16px, 16px);
     display: inline-block;
   }
 }
 
 @media (min-width: $dekstop-width) {
+  .order-form__fields {
+    gap: 20px;
+  }
+
   .order-form__wrapper {
     display: grid;
     grid-template-columns: 569px 568px;
@@ -272,14 +280,14 @@
     margin-bottom: 67px;
   }
 
+  .order-form__fieldset--additional {
+    margin-bottom: 69px;
+  }
+
   .order-form__fields--contacts {
     display: grid;
     grid-template-columns: 569px 568px;
     column-gap: 80px;
-  }
-
-  .order-form__textarea {
-    width: 100%;
   }
 
   .order-form__note {
@@ -290,7 +298,7 @@
     @include font-oswald(20px, 20px);
     margin-right: 81px;
     width: 568px;
-    padding: 13px;
+    padding: 16px;
   }
 
   .order-form__title--contacts {
@@ -302,7 +310,7 @@
   }
 
   .order-form__title--additional {
-    margin-bottom: 57px;
+    margin-bottom: 55px;
   }
 
   .order-form__fields--additional {

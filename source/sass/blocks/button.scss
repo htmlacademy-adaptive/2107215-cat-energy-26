@@ -6,10 +6,19 @@
   text-transform: uppercase;
   text-align: center;
   color: $color-white;
-  width: 280px;
   text-decoration: none;
   background-color: $color-apple;
   padding: 10px;
   display: block;
   border: none;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: $color-apple-dark;
+  color: rgba($color-white, 0.3);
+}
+
+.button:hover {
+  background-color: $color-apple-dark;
 }

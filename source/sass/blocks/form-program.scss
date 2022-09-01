@@ -20,7 +20,7 @@
 .form-program__text {
   @include font-oswald(14px, 18px);
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 38px;
 }
 
 
@@ -51,7 +51,7 @@
   }
 
   .form-program__header {
-    padding: 64px 36px 54px 40px;
+    padding: 33px 36px 54px 40px;
   }
 
   .form-program__order {
@@ -60,14 +60,14 @@
 
   .form-program__text {
     @include font-oswald(20px, 30px);
-    margin-bottom: 66px;
+    margin-bottom: 68px;
     max-width: 323px;
   }
 }
 
 @media (min-width: $dekstop-width) {
   .form-program__header {
-    padding: 77px 0 56px;
+    padding: 72px 0 56px;
   }
 
   .form-program__wrapper {

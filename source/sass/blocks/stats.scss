@@ -16,22 +16,26 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 14px 21px 0;
+  padding: 14px 20px 20px;
+  min-width: 124px;
+  border-radius: 5px;
+  border: 1px solid $color-silver;
+  position: relative;
 }
 
 .stats__description {
   @include font-arial(12px, 12px);
   color: $color-tundora;
   max-width: 80px;
+  position: absolute;
+  bottom: -5px;
+  left: 17%;
+  background-color: $color-gallery;
 }
 
 @media (min-width: $tablet-width) {
   .stats__inner {
-    padding: 14px 20px 20px;
-    border: 1px solid $color-silver;
-    border-radius: 5px;
     min-width: 162px;
-    position: relative;
   }
 
   .stats {
@@ -56,8 +60,6 @@
 @media (min-width: $dekstop-width) {
   .stats__description {
     min-width: 132px;
-    position: absolute;
-    bottom: -5px;
     left: 7%;
     background-color: $color-concrete;
   }

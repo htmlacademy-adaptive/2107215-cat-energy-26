@@ -2,7 +2,7 @@
 @import "../mixins.scss";
 
 .card-foot {
-  padding: 77px 0 25px;
+  padding: 79px 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 10%;
+    top: 12%;
     left: 50%;
     transform: translateX(-15px);
     background: url("../img/plus.svg") no-repeat center;
@@ -42,6 +42,15 @@
   margin-top: auto;
 }
 
+.card-foot__button:hover {
+  background-color: $color-extra-gallery;
+}
+
+.card-foot__button:active {
+  color: rgba($color-tundora, 0.3);
+  background-color: $color-extra-gallery;
+}
+
 @media (max-width: $mobile-width-only) {
   .card-foot {
     &::after {
@@ -52,7 +61,7 @@
       width: 1000%;
       height: 1px;
       z-index: -1;
-      background-color: $color-gallery-two;
+      background-color: $color-extra-gallery;
     }
   }
 }

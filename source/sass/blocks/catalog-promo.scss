@@ -13,7 +13,7 @@
 .catalog-promo__wrapper {
   height: 100%;
   background-color: rgba(104, 183, 56, 0.85);
-  padding: 186px 60px 43px;
+  padding: 188px 55px 45px;
   position: relative;
 
   &::after {
@@ -30,7 +30,7 @@
 }
 
 .catalog-promo__text {
-  @include font-arial(14px, 18px);
+  @include font-arial(16px, 20px);
   color: $color-white;
   text-align: center;
 }
@@ -43,6 +43,10 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/catalog-cat/tablet-cat@2x.jpg");
     }
+  }
+
+  .catalog-promo__text {
+    text-align: left;
   }
 
   .catalog-promo__wrapper {

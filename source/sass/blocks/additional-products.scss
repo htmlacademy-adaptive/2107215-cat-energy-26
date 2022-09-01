@@ -2,12 +2,12 @@
 @import "../variables.scss";
 
 .additional-products__wrapper {
-  padding: 25px 20px 35px;
+  padding: 27px 20px 35px;
 }
 
 .additional-products__title {
   @include font-oswald(24px, 24px);
-  margin-bottom: 36px;
+  margin-bottom: 33px;
   position: relative;
   width: 260px;
   padding-right: 20px;
@@ -16,7 +16,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 260px;
+    left: 247px;
     width: 1000%;
     height: 2px;
     z-index: -1;
@@ -53,27 +53,27 @@
       width: 1000%;
       height: 1px;
       z-index: -1;
-      background-color: $color-gallery-two;
+      background-color: $color-extra-gallery;
     }
   }
 }
 
 @media (min-width: $tablet-width) {
   .additional-products__wrapper {
-    padding: 68px 30px 76px;
+    padding: 72px 30px 76px;
   }
 
   .additional-products__item {
-    padding: 26px 38px 28px;
+    padding: 26px 38px 24px;
     min-width: 708px;
   }
 
   .additional-products__title {
     @include font-oswald(36px, 36px);
-    margin-bottom: 80px;
+    margin-bottom: 76px;
     padding-left: 36px;
     padding-right: 36px;
-    width: 420px;
+    width: 412px;
     background-color: $color-white;
   }
 
@@ -102,12 +102,13 @@
   }
 
   .additional-products__wrapper {
-    padding: 76px 0 86px;
+    padding: 82px 0 86px;
     max-width: 1220px;
     margin: 0 auto;
   }
 
   .additional-products__title {
+    width: 414px;
     padding-right: 35px;
     padding-left: 40px;
     margin-left: -40px;

@@ -6,7 +6,7 @@
 }
 
 .catalog__header {
-  padding: 44px 20px 49px;
+  padding: 29px 20px 39px;
 }
 
 .catalog__header-title {
@@ -19,7 +19,7 @@
 
 .catalog__item {
   width: 100%;
-  padding: 25px 0;
+  padding: 22px 0 25px;
   display: flex;
   flex-direction: column;
 }
@@ -45,7 +45,7 @@
       width: 1000%;
       height: 1px;
       z-index: -1;
-      background-color: $color-gallery-two;
+      background-color: $color-extra-gallery;
     }
   }
 
@@ -60,54 +60,44 @@
       width: 1000%;
       height: 1px;
       z-index: -1;
-      background-color: $color-gallery-two;
+      background-color: $color-extra-gallery;
     }
   }
 }
 
 @media (min-width: $tablet-width) {
+  .catalog__header {
+    padding: 40px 30px 78px;
+  }
+
   .catalog__header-title {
     @include font-oswald(60px, 60px);
-  }
-
-  .card__image-big {
-    width: 168px;
-    height: 200px;
-  }
-
-  .card__image {
-    width: 161px;
-    height: 172px;
   }
 
   .catalog__list {
     display: grid;
     row-gap: 141px;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10%;
-    grid-row-gap: 50px;
+    grid-column-gap: 9%;
+    grid-row-gap: 60px;
   }
 
   .catalog__item {
     justify-content: end;
     max-width: 500px;
     min-height: 511px;
-    padding: 0 39px 39px;
+    padding: 0 35px 39px;
     background: linear-gradient($color-white 16.5%, $color-concrete 16.5%);
   }
 
   .catalog__cards {
     padding: 0 30px;
   }
-
-  .catalog__header {
-    padding: 64px 30px 163px;
-  }
 }
 
 @media (min-width: $dekstop-width) {
   .catalog__header {
-    padding: 74px 0 165px;
+    padding: 74px 0 80px;
     max-width: 1220px;
     margin: 0 auto;
   }
