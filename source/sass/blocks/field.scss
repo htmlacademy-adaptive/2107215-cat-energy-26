@@ -52,7 +52,7 @@
 }
 
 .field__input:disabled {
-  opacity: 0.3;
+  border-color: rgba($color-mercury, 0.3);
   cursor: not-allowed;
 }
 
@@ -60,9 +60,12 @@
   fill: $color-apple;
 }
 
-.field__input:disabled ~ .field__mail,
+.field__input:disabled ~ .field__mail {
+  stroke: rgba($color-mine-shaft, 0.3);
+}
+
 .field__input:disabled ~ .field__phone {
-  opacity: 0.3;
+  fill: rgba($color-mine-shaft, 0.3);
 }
 
 .field__phone {

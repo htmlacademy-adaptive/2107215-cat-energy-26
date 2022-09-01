@@ -7,6 +7,14 @@
   list-style-type: none;
 }
 
+.main-nav__link:hover {
+  color: rgba($color-black, 0.6);
+}
+
+.main-nav__link:active {
+  color: rgba($color-black, 0.3);
+}
+
 .main-nav__link {
   @include font-oswald-medium(20px, 20px);
   text-transform: uppercase;
@@ -62,15 +70,6 @@
     text-transform: uppercase;
     color: $color-black;
     text-decoration: none;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
-  }
-
-  .main-nav__link:hover {
-    opacity: 0.6;
-  }
-
-  .main-nav__link:active {
-    opacity: 0.3;
   }
 
   .main-nav__item {
@@ -107,5 +106,13 @@
 
   .main-nav__link--color {
     color: $color-white;
+  }
+
+  .main-nav__link--color:hover {
+    color: rgba($color-white, 0.6);
+  }
+
+  .main-nav__link--color:active {
+    color: rgba($color-white, 0.3);
   }
 }

@@ -43,11 +43,12 @@
 }
 
 .card-foot__button:hover {
-  background-color: $color-gallery-two;
+  background-color: $color-extra-gallery;
 }
 
 .card-foot__button:active {
-  color: $color-tundora-transparent;
+  color: rgba($color-tundora, 0.3);
+  background-color: $color-extra-gallery;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -60,7 +61,7 @@
       width: 1000%;
       height: 1px;
       z-index: -1;
-      background-color: $color-gallery-two;
+      background-color: $color-extra-gallery;
     }
   }
 }
