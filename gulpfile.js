@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import htmlmin from 'gulp-htmlmin';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
@@ -14,77 +15,79 @@ import browser from 'browser-sync';
 
 // Styles
 
-export const styles = () => {
+const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
-  .pipe(plumber())
-  .pipe(sass().on('error', sass.logError))
-  .pipe(postcss([
-  autoprefixer(),
-  csso()
-  ]))
-  .pipe(rename('style.min.css'))
-  .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-  .pipe(browser.stream());
-  }
+    .pipe(plumber())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([
+    autoprefixer(),
+    csso()
+    ]))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(browser.stream());
+}
 
   // HTML
 
-  const html = () => {
+export const html = () => {
   return gulp.src('source/*.html')
-  .pipe(gulp.dest('build'));
-  }
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
+}
 
   // Scripts
 
-  const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/script.js')
-  .pipe(gulp.dest('build/js'))
-  .pipe(browser.stream());
-  }
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
 
   // Images
 
-  const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(squoosh())
-  .pipe(gulp.dest('build/img'))
-  }
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
+}
 
-  const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(gulp.dest('build/img'))
-  }
+    .pipe(gulp.dest('build/img'))
+}
 
   // WebP
 
-  const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
-  .pipe(squoosh({
-  webp: {}
-  }))
-  .pipe(gulp.dest('build/img'))
-  }
+    .pipe(squoosh({
+    webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
+}
 
   // SVG
 
-export const svg = () =>
-  gulp.src(['source/img/*.svg', 'source/img/**/*.svg', '!source/img/icons/*.svg'])
-  .pipe(svgo())
-  .pipe(gulp.dest('build/img'));
+const svg = () =>
+  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
 
-  const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
-  .pipe(svgo())
-  .pipe(svgstore({
-  inlineSvg: true
-  }))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('build/img'));
-  }
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
 
   // Copy
 
-  const copy = (done) => {
+const copy = (done) => {
   gulp.src([
   'source/fonts/*.{woff2,woff}',
   'source/*.ico',
@@ -93,17 +96,17 @@ export const svg = () =>
   })
   .pipe(gulp.dest('build'))
   done();
-  }
+}
 
   // Clean
 
-  const clean = () => {
+const clean = () => {
   return del('build');
-  };
+};
 
   // Server
 
-  const server = (done) => {
+const server = (done) => {
   browser.init({
   server: {
   baseDir: 'build'
@@ -113,26 +116,26 @@ export const svg = () =>
   ui: false,
   });
   done();
-  }
+}
 
   // Reload
 
-  const reload = (done) => {
+const reload = (done) => {
   browser.reload();
   done();
-  }
+}
 
   // Watcher
 
-  const watcher = () => {
+const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
-  }
+}
 
   // Build
 
-  export const build = gulp.series(
+export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
@@ -144,11 +147,11 @@ export const svg = () =>
   sprite,
   createWebp
   ),
-  );
+);
 
   // Default
 
-  export default gulp.series(
+export default gulp.series(
   clean,
   copy,
   copyImages,
@@ -163,4 +166,4 @@ export const svg = () =>
   gulp.series(
   server,
   watcher
-  ));
+));
