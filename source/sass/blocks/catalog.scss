@@ -86,7 +86,7 @@
     justify-content: end;
     max-width: 500px;
     min-height: 511px;
-    padding: 0 35px 39px;
+    padding: 0 37px 39px;
     background: linear-gradient($color-white 16.5%, $color-concrete 16.5%);
   }
 
@@ -117,5 +117,6 @@
 
   .catalog__item {
     width: 245px;
+    padding: 0 38px 39px;
   }
 }

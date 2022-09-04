@@ -96,6 +96,7 @@
 @media (min-width: $dekstop-width) {
   .card__title {
     padding: 0 10px;
+    margin-bottom: 15px;
   }
 
   .card__link-image {
@@ -103,7 +104,7 @@
   }
 
   .card__list-box {
-    padding: 6px 0;
+    padding: 7px 0;
     border-bottom: 1px solid $color-silver;
   }
 }
