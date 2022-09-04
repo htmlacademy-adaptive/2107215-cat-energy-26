@@ -47,20 +47,24 @@
   }
 
   .stats__description {
-    min-width: 132px;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: absolute;
+    @include font-arial(14px, 14px);
+    min-width: max-content;
     bottom: -5px;
-    left: 7%;
+    padding: 0 10px;
+    text-align: center;
+    transform: translateX(-5px);
     background-color: $color-white;
+  }
+
+  .stats__description--transform {
+    transform: translateX(-19px);
   }
 }
 
 @media (min-width: $dekstop-width) {
   .stats__description {
-    min-width: 132px;
-    left: 7%;
+    padding: 0 6px;
     background-color: $color-concrete;
+    bottom: -4px;
   }
 }

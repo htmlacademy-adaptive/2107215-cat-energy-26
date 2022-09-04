@@ -51,7 +51,7 @@
 
 .nutrition-program__description {
   @include font-arial(14px, 18px);
-  margin-bottom: 39px;
+  margin-bottom: 41px;
   color: $color-tundora;
 }
 
@@ -173,6 +173,6 @@
 
   .nutrition-program__description {
     @include font-arial(16px, 24px);
-    margin-bottom: 23px;
+    margin-bottom: 25px;
   }
 }

@@ -14,6 +14,7 @@
 .main-container__image {
   display: block;
   margin: 0 auto;
+  margin-bottom: 3px;
 }
 
 .main-container__header {
@@ -43,7 +44,7 @@
 .main-container__link {
   @include font-oswald(14px, 18px);
   display: inline-block;
-  padding: 10px 10px;
+  padding: 11px 10px;
   width: 280px;
   margin: 0 auto;
 }
@@ -72,7 +73,7 @@
     top: 235px;
     left: 50%;
     z-index: -1;
-    width: 685px;
+    width: 665px;
     height: 609px;
     position: absolute;
   }
@@ -141,7 +142,7 @@
   }
 
   .main-container__header {
-    padding: 100px 80px 80px;
+    padding: 105px 80px 80px;
     min-height: 660px;
   }
 }
