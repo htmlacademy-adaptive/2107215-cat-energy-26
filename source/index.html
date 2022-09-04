@@ -8,6 +8,8 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -51,7 +53,7 @@
             <source type="image/webp" media="(min-width: 768px)" srcset="img/index-foot/tablet-foot.webp 1x, img/index-foot/tablet-foot@2x.webp 2x">
             <source type="image/webp" srcset="img/index-foot/mobile-foot.webp 1x, img/index-foot/mobile-foot@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/index-foot/tablet-foot.png 1x, img/index-foot/tablet-foot@2x.png 2x">
-            <img class="main-container__image" src="img/index-foot/mobile-foot.png" srcset="img/index-foot/mobile-foot@2x.png 2x" width="280" height="270" alt="Пример продукции Кэт Энерджи.">
+            <img class="main-container__image" loading="lazy" src="img/index-foot/mobile-foot.png" srcset="img/index-foot/mobile-foot@2x.png 2x" width="280" height="270" alt="Пример продукции Кэт Энерджи.">
           </picture>
           <a class="button main-container__link" href="form.html">Подобрать программу</a>
         </header>
@@ -72,9 +74,9 @@
           <li class="nutrition-program__item nutrition-program__item--cat-pro">
             <h3 class="section-title nutrition-program__title">Набор массы</h3>
             <p class="nutrition-program__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы.</p>
-            <a class="nutrition-program__link " href="#">Каталог pro
+            <a class="nutrition-program__link" href="#">Каталог pro
               <svg class="nutrition-program__arrow" width="24" height="12" viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <use href="./img/sprite.svg#arrow"></use>
+                <use href="./img/sprite.svg#arrow"></use>
               </svg>
             </a>
           </li>
@@ -125,12 +127,16 @@
           </div>
           <div class="example-program__prorgess">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index-cat/tablet-cat-fat.webp 1x, img/index-cat/tablet-cat-fat@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-cat/mobile-cat-fat.webp 1x, img/index-cat/mobile-cat-fat@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/index-cat/tablet-cat-fat.png 1x, img/index-cat/tablet-cat-fat@2x.png 2x">
-              <img class="example-program__image-before" src="img/index-cat/mobile-cat-fat.png" srcset="img/index-cat/mobile-cat-fat@2x.png 2x" width="280" height="256" alt="Толстый кот.">
+              <img class="example-program__image-before" loading="lazy" src="img/index-cat/mobile-cat-fat.png" srcset="img/index-cat/mobile-cat-fat@2x.png 2x" width="280" height="256" alt="Толстый кот.">
             </picture>
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index-cat/tablet-cat-skinny.webp 1x, img/index-cat/tablet-cat-skinny@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-cat/mobile-cat-skinny.webp 1x, img/index-cat/mobile-cat-skinny@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/index-cat/tablet-cat-skinny.png 1x, img/index-cat/tablet-cat-skinny@2x.png 2x">
-              <img class="example-program__image-after" src="img/index-cat/mobile-cat-skinny.png" srcset="img/index-cat/mobile-cat-skinny@2x.png 2x" width="280" height="256" alt="Стройный кот.">
+              <img class="example-program__image-after" loading="lazy" src="img/index-cat/mobile-cat-skinny.png" srcset="img/index-cat/mobile-cat-skinny@2x.png 2x" width="280" height="256" alt="Стройный кот.">
             </picture>
             <button class="example-program__button" type="button">
               <svg class="example-program__switch" width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
