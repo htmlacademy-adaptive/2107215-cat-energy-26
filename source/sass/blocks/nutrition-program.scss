@@ -13,8 +13,11 @@
 
 .nutrition-program__item {
   background-color: $color-concrete;
-  padding: 30px 33px 20px 20px;
+  padding: 30px 33px 22px 20px;
   position: relative;
+  min-height: 266px;
+  display: flex;
+  flex-direction: column;
 }
 
 .nutrition-program__item--cat-slim {
@@ -51,8 +54,9 @@
 
 .nutrition-program__description {
   @include font-arial(14px, 18px);
-  margin-bottom: 41px;
   color: $color-tundora;
+  padding-bottom: 23px;
+  border-bottom: 1px solid $color-alto;
 }
 
 .nutrition-program__link {
@@ -61,12 +65,16 @@
   color: $color-black;
   text-decoration: none;
   position: relative;
+  width: 87px;
+  box-sizing: content-box;
+  padding-right: 38px;
+  margin-top: auto;
 }
 
 .nutrition-program__arrow {
   position: absolute;
   top: 50%;
-  left: 100px;
+  right: 0;
   transform: translateY(-6px) scaleX(1);
   transform-origin: center left;
   transition: transform 0.5s;
@@ -83,15 +91,12 @@
 @media (min-width: $tablet-width) {
   .nutrition-program__list {
     padding: 0 30px;
-    gap: 30px;
-  }
-
-  .nutrition-program__arrow {
-    left: 133px;
+    row-gap: 30px;
   }
 
   .nutrition-program__item {
-    padding: 77px 316px 56px 52px;
+    padding: 77px 315px 58px 53px;
+    min-height: 372px;
   }
 
   .nutrition-program__item--cat-slim {
@@ -116,17 +121,20 @@
   .nutrition-program__title {
     @include font-oswald(36px, 36px);
     text-align: left;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .nutrition-program__description {
     @include font-arial(16px, 24px);
-    margin-bottom: 50px;
+    border-bottom: none;
+    padding-bottom: 20px;
   }
 
   .nutrition-program__link {
     @include font-oswald(20px, 30px);
-    padding-right: 57px;
+    padding-right: 46px;
+    width: 108px;
+    margin-top: auto;
   }
 }
 
@@ -143,7 +151,7 @@
 
   .nutrition-program__item {
     max-width: 570px;
-    padding: 77px 51px 55px 52px;
+    padding: 77px 51px 58px 52px;
   }
 
   .nutrition-program__item--cat-slim {
@@ -173,6 +181,6 @@
 
   .nutrition-program__description {
     @include font-arial(16px, 24px);
-    margin-bottom: 25px;
+    padding-bottom: 20px;
   }
 }

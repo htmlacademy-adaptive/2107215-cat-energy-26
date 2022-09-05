@@ -66,6 +66,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog__item-foot {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
   .catalog__header {
     padding: 40px 30px 78px;
   }

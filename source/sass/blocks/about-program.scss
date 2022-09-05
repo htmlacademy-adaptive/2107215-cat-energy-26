@@ -101,7 +101,7 @@
 
   .about-program__title {
     @include font-oswald(60px, 60px);
-    margin-bottom: 75px;
+    margin-bottom: 68px;
   }
 
   .about-program__description {
@@ -113,7 +113,7 @@
   }
 
   .about-program__list {
-    row-gap: 70px;
+    row-gap: 74px;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 50px;
@@ -151,5 +151,9 @@
     padding-right: 0;
     column-gap: 70px;
     row-gap: 37px;
+  }
+
+  .about-program__title {
+    margin-bottom: 67px;
   }
 }

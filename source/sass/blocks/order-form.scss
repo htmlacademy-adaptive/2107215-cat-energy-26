@@ -17,7 +17,12 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  gap: 14px;
+  gap: 13px;
+}
+
+.order-form__fields--contacts .field__input {
+  margin-left: 10px;
+  padding-right: 40px;
 }
 
 .order-form__fields-radio {
@@ -29,12 +34,12 @@
 }
 
 .order-form__fieldset--program {
-  padding: 23px 0 18px;
+  padding: 22px 0 20px;
   margin-bottom: 27px;
 }
 
 .order-form__fieldset--contacts {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .order-form__title--contacts {
@@ -45,7 +50,8 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 199px;
+    transform: translateY(-11px);
+    left: 201px;
     width: 10000%;
     height: 2px;
     z-index: -1;
@@ -65,7 +71,7 @@
     position: absolute;
     top: 50%;
     left: 141px;
-    width: 10000%;
+    width: 100000%;
     height: 2px;
     z-index: -1;
     background-color: $color-apple;
@@ -73,27 +79,28 @@
 }
 
 .order-form__fieldset--additional {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+}
+
+.order-form__title {
+  @include font-oswald(24px, 26px);
+  margin-bottom: 35px;
 }
 
 .order-form__title--additional {
   position: relative;
+  margin-bottom: 30px;
 
   &::before {
     content: "";
     position: absolute;
     top: 50%;
     left: 162px;
-    width: 10000%;
+    width: 100000%;
     height: 2px;
     z-index: -1;
     background-color: $color-apple;
   }
-}
-
-.order-form__title {
-  @include font-oswald(24px, 26px);
-  margin-bottom: 35px;
 }
 
 .order-form__textarea {
@@ -152,9 +159,17 @@
 
 @media (min-width: $tablet-width) {
   .order-form__fieldset--program {
-    padding: 25px 28px;
+    padding: 30px 28px;
     margin-bottom: 80px;
     border: 1px solid $color-mercury;
+  }
+
+  .order-form__fields--contacts .field__input {
+    margin-left: 18px;
+  }
+
+  .order-form__fields {
+    gap: 21px;
   }
 
   .order-form__fields--program {
@@ -166,7 +181,7 @@
   }
 
   .order-form__fieldset--contacts {
-    margin-bottom: 65px;
+    margin-bottom: 72px;
   }
 
   .order-form__fieldset--description {
@@ -203,6 +218,7 @@
 
     &::before {
       left: -1000%;
+      transform: translateY(0);
     }
   }
 
@@ -214,7 +230,7 @@
     margin-bottom: 72px;
 
     &::before {
-      left: -1000%;
+      left: -10000%;
     }
   }
 
@@ -226,7 +242,7 @@
     margin-bottom: 63px;
 
     &::before {
-      left: -1000%;
+      left: -10000%;
     }
   }
 
@@ -281,7 +297,7 @@
   }
 
   .order-form__fieldset--additional {
-    margin-bottom: 69px;
+    margin-bottom: 66px;
   }
 
   .order-form__fields--contacts {

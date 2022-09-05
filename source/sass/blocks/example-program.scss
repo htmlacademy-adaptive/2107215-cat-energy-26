@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .example-program {
-  background-color: #eaeaea;
+  background-color: $color-gallery;
 }
 
 .example-program__prorgess {
@@ -121,7 +121,7 @@
 
 .example-program__stats {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
 }
 
 .example-program__calculation-description {
@@ -250,7 +250,7 @@
   }
 
   .example-program__stats {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   .example-program__calculation {

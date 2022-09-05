@@ -9,7 +9,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 13px;
+  padding: 10px 0 11px;
+}
+
+.main-header__logo-image {
+  padding: 3px 0 0;
+  box-sizing: content-box;
+}
+
+.main-header__logo-name {
+  margin-left: -11px;
 }
 
 .main-header__logo-image:active {

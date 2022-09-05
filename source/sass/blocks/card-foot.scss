@@ -35,7 +35,7 @@
 }
 
 .card-foot__button {
-  background-color: #f2f2f2;
+  background-color: $color-concrete;
   color: $color-tundora;
   border: none;
   width: 100%;
@@ -79,13 +79,6 @@
       height: 60px;
       transform: translateX(-30px);
     }
-  }
-
-  .card-foot--margin {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
   }
 
   .card-foot__subtitle {

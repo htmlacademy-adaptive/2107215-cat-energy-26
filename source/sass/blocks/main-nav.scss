@@ -46,8 +46,10 @@
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     min-width: 440px;
+    max-width: 500px;
+    column-gap: 36px;
   }
 
   .main-nav__item--active {
