@@ -35,6 +35,7 @@
   width: 100%;
   padding: 13px 0 19px;
   border-top: 1px solid $color-silver;
+  border-bottom: none;
 }
 
 .additional-products__item:last-child {
@@ -66,6 +67,8 @@
   .additional-products__item {
     padding: 29px 38px 23px;
     min-width: 708px;
+    border: 1px solid $color-silver;
+    border-bottom: none;
   }
 
   .additional-products__title {
@@ -75,6 +78,17 @@
     padding-right: 36px;
     width: 412px;
     background-color: $color-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 1000%;
+      height: 2px;
+      z-index: -1;
+      background-color: $color-apple;
+    }
   }
 
   .additional-products__list {
@@ -99,6 +113,8 @@
     grid-template-columns: 613px 244px;
     column-gap: 38px;
     align-items: center;
+    border-left: none;
+    border-right: none;
   }
 
   .additional-products__wrapper {
