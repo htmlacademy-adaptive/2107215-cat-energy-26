@@ -149,8 +149,9 @@
 
   .about-program__list {
     padding-right: 0;
-    column-gap: 70px;
+    column-gap: 74.5px;
     row-gap: 37px;
+    justify-content: flex-start;
   }
 
   .about-program__title {
