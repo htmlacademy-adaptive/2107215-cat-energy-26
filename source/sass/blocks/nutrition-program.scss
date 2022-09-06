@@ -15,9 +15,6 @@
   background-color: $color-concrete;
   padding: 30px 33px 22px 20px;
   position: relative;
-  min-height: 266px;
-  display: flex;
-  flex-direction: column;
 }
 
 .nutrition-program__item--cat-slim {
@@ -57,6 +54,7 @@
   color: $color-tundora;
   padding-bottom: 23px;
   border-bottom: 1px solid $color-alto;
+  margin-bottom: 15px;
 }
 
 .nutrition-program__link {
@@ -65,10 +63,7 @@
   color: $color-black;
   text-decoration: none;
   position: relative;
-  width: 87px;
-  box-sizing: content-box;
   padding-right: 38px;
-  margin-top: auto;
 }
 
 .nutrition-program__arrow {
@@ -96,7 +91,6 @@
 
   .nutrition-program__item {
     padding: 77px 315px 58px 53px;
-    min-height: 372px;
   }
 
   .nutrition-program__item--cat-slim {
@@ -127,14 +121,12 @@
   .nutrition-program__description {
     @include font-arial(16px, 24px);
     border-bottom: none;
-    padding-bottom: 20px;
+    margin-bottom: 55px;
   }
 
   .nutrition-program__link {
     @include font-oswald(20px, 30px);
-    padding-right: 46px;
-    width: 108px;
-    margin-top: auto;
+    padding-right: 48px;
   }
 }
 
@@ -181,6 +173,10 @@
 
   .nutrition-program__description {
     @include font-arial(16px, 24px);
-    padding-bottom: 20px;
+    margin-bottom: 23px;
+  }
+
+  .nutrition-program__link {
+    padding-right: 52px;
   }
 }
