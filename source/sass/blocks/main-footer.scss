@@ -86,6 +86,10 @@
     background: url("../img/map/location-tablet.png") no-repeat;
     background-size: contain;
     background-position: center 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map/location-tablet@2x.png");
+    }
   }
 
   .main-footer__html-logo-image,
@@ -152,5 +156,9 @@
     background: url("../img/map/location-desktop.png") no-repeat;
     background-size: contain;
     background-position: center 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map/location-desktop@2x.png");
+    }
   }
 }
