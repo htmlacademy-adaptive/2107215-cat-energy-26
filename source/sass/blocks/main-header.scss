@@ -15,10 +15,16 @@
 .main-header__logo-image {
   padding: 3px 0 0;
   box-sizing: content-box;
+  object-fit: contain;
+  height: auto;
+  max-width: 100%;
 }
 
 .main-header__logo-name {
   margin-left: -11px;
+  object-fit: contain;
+  height: auto;
+  max-width: 100%;
 }
 
 .main-header__logo-image:active {

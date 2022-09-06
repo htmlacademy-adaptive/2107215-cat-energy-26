@@ -68,7 +68,7 @@
 
 @media (min-width: $tablet-width) {
   .card-foot {
-    padding: 161px 39px 39px;
+    padding: 162px 39px 39px;
     border: 2px solid $color-concrete;
     max-width: 500px;
     max-height: 429px;
@@ -86,14 +86,14 @@
     color: $color-cod-gray;
     max-width: 134px;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 27px;
   }
 
   .card-foot__text {
     @include font-arial(16px, 18px);
     max-width: 170px;
     text-align: center;
-    margin-bottom: 85px;
+    margin-bottom: 87px;
     color: $color-tundora;
   }
 
@@ -106,5 +106,9 @@
   .card-foot {
     width: 245px;
     padding: 161px 35px 39px;
+  }
+
+  .card-foot__text {
+    margin-bottom: 89px;
   }
 }

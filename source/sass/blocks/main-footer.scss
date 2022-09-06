@@ -6,8 +6,10 @@
 
 .main-footer__map {
   width: 100%;
-  border: 0;
   height: 362px;
+  background: url("../img/map/location.png") no-repeat;
+  background-size: contain;
+  background-position: center 0;
 }
 
 .main-footer__html-logo-image,
@@ -79,6 +81,13 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-footer__map {
+    height: 400px;
+    background: url("../img/map/location-tablet.png") no-repeat;
+    background-size: contain;
+    background-position: center 0;
+  }
+
   .main-footer__html-logo-image,
   .main-footer__html-logo {
     display: none;
@@ -86,10 +95,6 @@
 
   .main-footer__html-academy {
     display: block;
-  }
-
-  .main-footer__map {
-    height: 400px;
   }
 
   .main-footer__container {
@@ -141,5 +146,11 @@
     margin: 0 auto;
     padding: 53px 0 58px 0;
     max-width: 1220px;
+  }
+
+  .main-footer__map {
+    background: url("../img/map/location-desktop.png") no-repeat;
+    background-size: contain;
+    background-position: center 0;
   }
 }
