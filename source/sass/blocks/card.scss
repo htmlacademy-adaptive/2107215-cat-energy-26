@@ -7,6 +7,12 @@
   margin-bottom: 6px;
 }
 
+.card__image {
+  object-fit: contain;
+  height: auto;
+  max-width: 100%;
+}
+
 .card__link {
   margin: 0 auto;
   width: 100%;
@@ -96,6 +102,7 @@
 @media (min-width: $dekstop-width) {
   .card__title {
     padding: 0 10px;
+    margin-bottom: 18px;
   }
 
   .card__link-image {
@@ -103,7 +110,7 @@
   }
 
   .card__list-box {
-    padding: 6px 0;
+    padding: 7px 0;
     border-bottom: 1px solid $color-silver;
   }
 }

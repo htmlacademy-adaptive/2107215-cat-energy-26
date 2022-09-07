@@ -54,7 +54,7 @@
 
     &::after {
       content: "";
-      top: 25%;
+      top: 30%;
       left: 17%;
     }
   }
@@ -69,6 +69,10 @@
       top: 55px;
       left: 50%;
     }
+  }
+
+  .catalog-promo__text {
+    text-align: center;
   }
 
   .catalog-promo {

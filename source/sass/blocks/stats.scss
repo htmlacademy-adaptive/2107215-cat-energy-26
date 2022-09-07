@@ -8,7 +8,6 @@
 
 .stats__value {
   @include font-oswald(24px, 24px);
-  margin-bottom: 7px;
   order: -1;
 }
 
@@ -16,7 +15,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 14px 20px 20px;
+  padding: 14px 20px 16px 20px;
   min-width: 124px;
   border-radius: 5px;
   border: 1px solid $color-silver;
@@ -26,9 +25,9 @@
 .stats__description {
   @include font-arial(12px, 12px);
   color: $color-tundora;
-  max-width: 80px;
+  width: 80px;
   position: absolute;
-  bottom: -5px;
+  transform: translateY(31px);
   left: 17%;
   background-color: $color-gallery;
 }
@@ -47,20 +46,25 @@
   }
 
   .stats__description {
-    min-width: 132px;
-    padding-left: 10px;
-    padding-right: 10px;
-    position: absolute;
-    bottom: -5px;
-    left: 7%;
+    @include font-arial(14px, 14px);
+    width: 130px;
+    left: 12%;
+    padding: 0 5px;
+    text-align: center;
+    transform: translateX(-5px) translateY(48px);
     background-color: $color-white;
+  }
+
+  .stats__description--transform {
+    width: 140px;
+    left: 16%;
+    transform: translateX(-19px) translateY(48px);
   }
 }
 
 @media (min-width: $dekstop-width) {
   .stats__description {
-    min-width: 132px;
-    left: 7%;
+    padding: 0 6px;
     background-color: $color-concrete;
   }
 }

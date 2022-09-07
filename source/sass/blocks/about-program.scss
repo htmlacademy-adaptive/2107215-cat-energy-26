@@ -21,7 +21,7 @@
 
 .about-program__title {
   @include font-oswald(36px, 40px);
-  margin-bottom: 42px;
+  margin-bottom: 39px;
 }
 
 .about-program__description {
@@ -101,7 +101,7 @@
 
   .about-program__title {
     @include font-oswald(60px, 60px);
-    margin-bottom: 75px;
+    margin-bottom: 68px;
   }
 
   .about-program__description {
@@ -113,7 +113,7 @@
   }
 
   .about-program__list {
-    row-gap: 65px;
+    row-gap: 74px;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 50px;
@@ -124,7 +124,7 @@
 
   .about-program__item {
     width: 249px;
-    padding: 118px 0 56px 0;
+    padding: 115px 0 56px 0;
     counter-increment: number;
     position: relative;
 
@@ -144,12 +144,17 @@
   .about-program__wrapper {
     max-width: 1220px;
     margin: 0 auto;
-    padding: 71px 0 69px;
+    padding: 75px 0 69px;
   }
 
   .about-program__list {
     padding-right: 0;
-    column-gap: 70px;
+    column-gap: 74.5px;
     row-gap: 37px;
+    justify-content: flex-start;
+  }
+
+  .about-program__title {
+    margin-bottom: 67px;
   }
 }

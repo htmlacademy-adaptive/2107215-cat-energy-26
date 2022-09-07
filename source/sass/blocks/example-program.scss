@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .example-program {
-  background-color: #eaeaea;
+  background-color: $color-gallery;
 }
 
 .example-program__prorgess {
@@ -58,6 +58,10 @@
     top: 0;
     border-radius: 0 0 2px 2px;
   }
+}
+
+.example-program__description-br {
+  display: none;
 }
 
 .example-program__button:hover {
@@ -117,7 +121,7 @@
 
 .example-program__stats {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
 }
 
 .example-program__calculation-description {
@@ -132,6 +136,10 @@
   .example-program__prorgess {
     position: relative;
     height: 512px;
+  }
+
+  .example-program__description-br {
+    display: block;
   }
 
   .example-program__image-before {
@@ -208,6 +216,10 @@
     background: linear-gradient($color-white 22%, $color-concrete 22%);
   }
 
+  .example-program__description-br {
+    display: none;
+  }
+
   .example-program__wrapper {
     max-width: 1220px;
     margin: 0 auto;
@@ -238,7 +250,7 @@
   }
 
   .example-program__stats {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   .example-program__calculation {

@@ -35,7 +35,7 @@
 }
 
 .card-foot__button {
-  background-color: #f2f2f2;
+  background-color: $color-concrete;
   color: $color-tundora;
   border: none;
   width: 100%;
@@ -66,10 +66,9 @@
   }
 }
 
-
 @media (min-width: $tablet-width) {
   .card-foot {
-    padding: 161px 39px 39px;
+    padding: 162px 39px 39px;
     border: 2px solid $color-concrete;
     max-width: 500px;
     max-height: 429px;
@@ -82,19 +81,12 @@
     }
   }
 
-  .card-foot--margin {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-  }
-
   .card-foot__subtitle {
     @include font-oswald(20px, 22px);
     color: $color-cod-gray;
     max-width: 134px;
     text-align: center;
-    margin-bottom: 23px;
+    margin-bottom: 27px;
   }
 
   .card-foot__text {
@@ -104,11 +96,19 @@
     margin-bottom: 87px;
     color: $color-tundora;
   }
+
+  .card-foot__button {
+    padding: 7px;
+  }
 }
 
 @media (min-width: $dekstop-width) {
   .card-foot {
     width: 245px;
     padding: 161px 35px 39px;
+  }
+
+  .card-foot__text {
+    margin-bottom: 89px;
   }
 }

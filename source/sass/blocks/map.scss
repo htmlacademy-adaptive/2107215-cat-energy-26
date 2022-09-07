@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+.map {
+  width: 100%;
+  border: 0;
+  height: 362px;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    height: 400px;
+  }
+}

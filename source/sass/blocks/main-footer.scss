@@ -6,8 +6,10 @@
 
 .main-footer__map {
   width: 100%;
-  border: 0;
   height: 362px;
+  background: url("../img/map/location.png") no-repeat;
+  background-size: contain;
+  background-position: center 0;
 }
 
 .main-footer__html-logo-image,
@@ -37,7 +39,7 @@
 }
 
 .main-footer__wrapper {
-  padding: 38px 20px 22px;
+  padding: 33px 20px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +54,7 @@
 }
 
 .main-footer__link-logo-cat {
-  margin-bottom: 46px;
+  margin-bottom: 52px;
 }
 
 .main-footer__link-logo-cat:active {
@@ -62,7 +64,7 @@
 .main-footer__social {
   margin: 0;
   padding: 0;
-  margin-bottom: 43px;
+  margin-bottom: 38px;
   display: flex;
   column-gap: 24px;
   min-width: 132px;
@@ -79,6 +81,17 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-footer__map {
+    height: 400px;
+    background: url("../img/map/location-tablet.png") no-repeat;
+    background-size: contain;
+    background-position: center 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map/location-tablet@2x.png");
+    }
+  }
+
   .main-footer__html-logo-image,
   .main-footer__html-logo {
     display: none;
@@ -86,10 +99,6 @@
 
   .main-footer__html-academy {
     display: block;
-  }
-
-  .main-footer__map {
-    height: 400px;
   }
 
   .main-footer__container {
@@ -119,7 +128,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 54px 30px;
+    padding: 58px 30px;
   }
 }
 
@@ -127,19 +136,29 @@
   .main-footer__container {
     position: absolute;
     right: 50%;
-    transform: translateX(-10%) translateY(95px);
+    transform: translateX(-8%) translateY(95px);
     padding: 0;
     background-color: $color-white;
   }
 
   .main-footer__contacts {
-    min-width: 565px;
-    padding: 56px 80px;
+    width: 565px;
+    padding: 58px 80px;
   }
 
   .main-footer__wrapper {
     margin: 0 auto;
-    padding: 57px 0 58px 0;
+    padding: 53px 0 58px 0;
     max-width: 1220px;
+  }
+
+  .main-footer__map {
+    background: url("../img/map/location-desktop.png") no-repeat;
+    background-size: contain;
+    background-position: center 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map/location-desktop@2x.png");
+    }
   }
 }

@@ -37,6 +37,17 @@
   }
 
   .contacts__box {
-    max-width: 160px;
+    max-width: 158px;
+  }
+}
+
+@media (min-width: $dekstop-width) {
+  .contacts__text {
+    text-align: left;
+  }
+
+  .contacts__text-city {
+    @include font-arial(16px, 20px);
+    text-align: left;
   }
 }
