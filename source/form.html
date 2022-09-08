@@ -27,15 +27,15 @@
           </button>
         </div>
         <nav class="main-nav">
-          <div class="main-nav__wrapper">
+          <div class="main-nav__wrapper main-header__main-nav-wrapper">
             <ul class="main-nav__list">
-              <li class="main-nav__item">
+              <li class="main-nav__item main-header__main-nav-item">
                 <a class="main-nav__link" href="index.html">Главная</a>
               </li>
-              <li class="main-nav__item">
+              <li class="main-nav__item main-header__main-nav-item">
                 <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="main-nav__item main-nav__item--active">
+              <li class="main-nav__item main-header__main-nav-item main-nav__item--active">
                 <a class="main-nav__link" href="form.html">Подбор программы</a>
               </li>
             </ul>
@@ -74,21 +74,21 @@
                   <li class="order-form__fields-item control">
                     <label class="control__label">
                       <input class="visually-hidden control__input" type="radio" name="program-type" value="slim" checked>
-                      <span class="control__mark radio"></span>
+                      <span class="control__mark control__mark--radio"></span>
                       <span class="control__text">Похудение</span>
                     </label>
                   </li>
                   <li class="order-form__fields-item control">
                     <label class="control__label">
                       <input class="visually-hidden control__input" type="radio" name="program-type" value="mass">
-                      <span class="control__mark radio"></span>
+                      <span class="control__mark control__mark--radio"></span>
                       <span class="control__text">Набор массы</span>
                     </label>
                   </li>
                   <li class="order-form__fields-item control">
                     <label class="control__label">
                       <input class="visually-hidden control__input" type="radio" name="program-type" value="advice" disabled>
-                      <span class="control__mark radio"></span>
+                      <span class="control__mark control__mark--radio"></span>
                       <span class="control__text">Не знаю (нужен ваш совет)</span>
                     </label>
                   </li>
@@ -100,14 +100,14 @@
               <ul class="order-form__fields order-form__fields--contacts">
                 <li class="order-form__fields-item field">
                   <label class="field__label" for="form-email">E-mail:*</label>
-                  <input class="field__input" type="email" id="form-email" name="form-email" placeholder="kuklachev@gmail.com" required>
+                  <input class="field__input order-form__field-input" type="email" id="form-email" name="form-email" placeholder="kuklachev@gmail.com" required>
                   <svg class="field__mail" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="./img/sprite.svg#mail"></use>
                   </svg>
                 </li>
                 <li class="order-form__fields-item field">
                   <label class="field__label" for="form-phone">Телефон:*</label>
-                  <input class="field__input" placeholder="8 (960) 900-60-90" type="tel" name="form-phone" id="form-phone" pattern="^[ 0-9]+$" required>
+                  <input class="field__input order-form__field-input" placeholder="8 (960) 900-60-90" type="tel" name="form-phone" id="form-phone" pattern="^[ 0-9]+$" required>
                   <svg class="field__phone" width="21" height="21" viewBox="0 0 20 21" xmlns="http://www.w3.org/2000/svg">
                     <use href="./img/sprite.svg#phone"></use>
                   </svg>
@@ -124,28 +124,28 @@
                 <li class="order-form__fields-item control">
                   <label class="control__label">
                     <input class="visually-hidden control__input" type="checkbox" name="program-add" value="sweetener" checked>
-                    <span class="control__mark checkbox"></span>
+                    <span class="control__mark control__mark--checkbox"></span>
                     <span class="control__text control__text--additional">Сахарозаменитель</span>
                   </label>
                 </li>
                 <li class="order-form__fields-item control">
                   <label class="control__label">
                     <input class="visually-hidden control__input" type="checkbox" name="program-add" value="water">
-                    <span class="control__mark  checkbox"></span>
+                    <span class="control__mark  control__mark--checkbox"></span>
                     <span class="control__text control__text--additional">Питьевая вода</span>
                   </label>
                 </li>
                 <li class="order-form__fields-item control">
                   <label class="control__label">
                     <input class="visually-hidden control__input" type="checkbox" name="program-add" value="milk">
-                    <span class="control__mark checkbox"></span>
+                    <span class="control__mark control__mark--checkbox"></span>
                     <span class="control__text control__text--additional">Молоко</span>
                   </label>
                 </li>
                 <li class="order-form__fields-item control">
                   <label class="control__label">
                     <input class="visually-hidden control__input" type="checkbox" name="program-add" value="vitamins">
-                    <span class="control__mark checkbox"></span>
+                    <span class="control__mark control__mark--checkbox"></span>
                     <span class="control__text control__text--additional">Витамины</span>
                   </label>
                 </li>

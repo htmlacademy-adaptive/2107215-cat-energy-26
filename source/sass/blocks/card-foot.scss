@@ -71,13 +71,14 @@
     padding: 162px 39px 39px;
     border: 2px solid $color-concrete;
     max-width: 500px;
-    max-height: 429px;
 
     &::before {
       content: "";
       width: 60px;
       height: 60px;
+      left: 50%;
       transform: translateX(-30px);
+      top: 52px;
     }
   }
 
@@ -93,7 +94,7 @@
     @include font-arial(16px, 18px);
     max-width: 170px;
     text-align: center;
-    margin-bottom: 87px;
+    margin-bottom: 89px;
     color: $color-tundora;
   }
 
