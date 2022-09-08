@@ -2,7 +2,7 @@
 @import "../variables.scss";
 
 .additional-products__wrapper {
-  padding: 27px 20px 35px;
+  padding: 27px 20px 32px;
 }
 
 .additional-products__title {
@@ -61,7 +61,7 @@
 
 @media (min-width: $tablet-width) {
   .additional-products__wrapper {
-    padding: 70px 30px 80px;
+    padding: 70px 30px 82px;
   }
 
   .additional-products__item {
@@ -118,7 +118,7 @@
   }
 
   .additional-products__wrapper {
-    padding: 82px 0 86px;
+    padding: 80px 0 86px;
     max-width: 1220px;
     margin: 0 auto;
   }
@@ -128,5 +128,6 @@
     padding-right: 35px;
     padding-left: 40px;
     margin-left: -40px;
+    margin-bottom: 78px;
   }
 }

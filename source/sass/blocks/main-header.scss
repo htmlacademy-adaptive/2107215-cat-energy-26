@@ -76,18 +76,18 @@
   display: none;
 }
 
-.main-header__wrapper--nojs .main-nav__wrapper {
+.main-header__wrapper--nojs .main-header__main-nav-wrapper {
   position: static;
   min-height: 0;
 }
 
 @media (max-width: $mobile-width-only) {
-  .main-header__wrapper--closed .main-nav__item {
+  .main-header__wrapper--closed .main-header__main-nav-item {
     display: none;
   }
 }
 
-.main-header__wrapper--nojs .main-nav__item {
+.main-header__wrapper--nojs .main-header__main-nav-item {
   display: block;
 }
 

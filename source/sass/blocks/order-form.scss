@@ -20,8 +20,8 @@
   gap: 13px;
 }
 
-.order-form__fields--contacts .field__input {
-  margin-left: 10px;
+.order-form__fields--contacts .order-form__field-input {
+  margin-left: 12px;
   padding-right: 40px;
 }
 
@@ -164,7 +164,7 @@
     border: 1px solid $color-mercury;
   }
 
-  .order-form__fields--contacts .field__input {
+  .order-form__fields--contacts .order-form__field-input {
     margin-left: 18px;
   }
 
@@ -269,7 +269,7 @@
 
 @media (min-width: $dekstop-width) {
   .order-form__fields {
-    gap: 20px;
+    gap: 23px;
   }
 
   .order-form__wrapper {
@@ -318,7 +318,7 @@
   }
 
   .order-form__title--contacts {
-    margin-bottom: 79px;
+    margin-bottom: 75px;
   }
 
   .order-form__title--description {

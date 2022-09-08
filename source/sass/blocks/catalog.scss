@@ -67,7 +67,6 @@
 
 @media (min-width: $tablet-width) {
   .catalog__item-foot {
-    margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -87,14 +86,19 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 9%;
     grid-row-gap: 60px;
+    align-items: flex-end;
   }
 
   .catalog__item {
     justify-content: end;
     max-width: 500px;
     min-height: 511px;
-    padding: 0 37px 39px;
-    background: linear-gradient($color-white 16.5%, $color-concrete 16.5%);
+    padding: 8px 37px 39px;
+    background: linear-gradient($color-white 78px, $color-concrete 78px);
+  }
+
+  .catalog__item--odd {
+    padding-top: 36px;
   }
 
   .catalog__cards {
@@ -107,6 +111,10 @@
     padding: 74px 0 80px;
     max-width: 1220px;
     margin: 0 auto;
+  }
+
+  .catalog__item--odd {
+    padding-top: 29px;
   }
 
   .catalog__cards {
@@ -124,6 +132,6 @@
 
   .catalog__item {
     width: 245px;
-    padding: 0 38px 39px;
+    padding: 2px 38px 39px;
   }
 }
